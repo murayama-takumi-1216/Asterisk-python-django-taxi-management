@@ -1,6 +1,9 @@
 import logging
 
+from django.core.cache import cache
 from django.db.models import Q
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_datatables.filters import DatatablesFilterBackend
 from rest_framework_datatables.renderers import DatatablesRenderer
@@ -72,6 +75,28 @@ class ReporteResumenTurnoOperadoresViewSet(ProtectedAdministradorApiView, ModelV
     filter_backends = [DatatablesFilterBackend]
     renderer_classes = [DatatablesRenderer]
 
+    def list(self, request, *args, **kwargs):
+        """List with caching for daily summary data (1 hour cache)"""
+        filtro_fecha_actual = request.query_params.get("filtro_fecha_actual", None)
+
+        # Generate cache key based on filter parameters
+        cache_key = f"reporte_resumen_operadores_{filtro_fecha_actual}"
+
+        # Try to get cached data
+        cached_data = cache.get(cache_key)
+        if cached_data is not None:
+            logger.debug(f"Cache HIT for {cache_key}")
+            return cached_data
+
+        logger.debug(f"Cache MISS for {cache_key}")
+        # If not in cache, get from database
+        response = super().list(request, *args, **kwargs)
+
+        # Cache for 1 hour (3600 seconds)
+        cache.set(cache_key, response, 3600)
+
+        return response
+
     def filter_queryset(self, queryset):
         filtro_fecha_actual = self.request.query_params.get("filtro_fecha_actual", None)
         if filtro_fecha_actual:
@@ -93,6 +118,27 @@ class ReporteSimpleTurnoOperadorViewSet(ProtectedAdministradorApiView, ModelView
     def get_queryset(self):
         """Optimize queries with select_related to prevent N+1 problem"""
         return TurnoOperador.objects.select_related('operador', 'horario').all()
+
+    def list(self, request, *args, **kwargs):
+        """List with caching for operator shift reports (30 minutes cache)"""
+        filtro_fecha_actual = request.query_params.get("filtro_fecha_actual", None)
+
+        # Generate cache key
+        cache_key = f"reporte_turno_operador_{filtro_fecha_actual}"
+
+        # Try cache first
+        cached_data = cache.get(cache_key)
+        if cached_data is not None:
+            logger.debug(f"Cache HIT for {cache_key}")
+            return cached_data
+
+        logger.debug(f"Cache MISS for {cache_key}")
+        response = super().list(request, *args, **kwargs)
+
+        # Cache for 30 minutes (1800 seconds)
+        cache.set(cache_key, response, 1800)
+
+        return response
 
     def filter_queryset(self, queryset):
         filtro_fecha_actual = self.request.query_params.get("filtro_fecha_actual", None)
