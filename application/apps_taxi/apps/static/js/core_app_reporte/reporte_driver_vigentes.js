@@ -258,42 +258,19 @@ $(document).ready(function () {
   });
 
   // ----------- rango de fechas  -------------------->
-  const fechaDPActual = new Date();
-  const fechaDPMinima = new Date();
-  fechaDPMinima.setDate(fechaDPMinima.getDate() - 120);
-  $("#id_turncond_fecha_inicio").bootstrapMaterialDatePicker({
-    format: "YYYY-MM-DD",
-    time: false,
-    date: true,
-    lang: "es-us",
-    clearButton: true,
-    shortTime: false,
-    clearText: "Limpiar",
-    cancelText: "Cancelar",
-    currentDate: fechaDPActual,
-    minDate: fechaDPMinima,
-    maxDate: fechaDPActual
-  }).change(function () {
+  // Use standardized date configuration (7-day default lookback)
+  ReporteDateConfig.initDatePicker("#id_turncond_fecha_inicio").change(function () {
     let fechaCampo = moment($("#id_turncond_fecha_inicio").val());
     $("#id_turncond_fecha_fin").bootstrapMaterialDatePicker("setMinDate", fechaCampo.format("YYYY-MM-DD"))
   });
 
-  $("#id_turncond_fecha_fin").bootstrapMaterialDatePicker({
-    format: "YYYY-MM-DD",
-    time: false,
-    date: true,
-    lang: "es-us",
-    clearButton: true,
-    shortTime: false,
-    clearText: "Limpiar",
-    cancelText: "Cancelar",
-    // currentDate: fechaDPActual,
-    minDate: fechaDPMinima,
-    maxDate: fechaDPActual
-  }).change(function () {
+  ReporteDateConfig.initDatePicker("#id_turncond_fecha_fin").change(function () {
     let fechaCampo = moment($("#id_turncond_fecha_fin").val());
     $("#id_turncond_fecha_inicio").bootstrapMaterialDatePicker("setMaxDate", fechaCampo.format("YYYY-MM-DD"))
   });
+
+  // Set default 7-day date range
+  ReporteDateConfig.setDefaultDateRange("#id_turncond_fecha_inicio", "#id_turncond_fecha_fin");
   // ----------- rango de fechas  <--------------------
   $btnFiltarTurnoConductoresList.click(function () {
     $(this).prop("disabled", true);
