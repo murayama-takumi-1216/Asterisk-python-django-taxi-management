@@ -73,6 +73,7 @@ class ConductorListViewSet(ProtectedAdministradorApiView, ModelViewSet):
                 Q(cod_conductor__istartswith=search_cod_conductor)
                 | Q(nombre__istartswith=search_cod_conductor)
                 | Q(apellido_paterno__istartswith=search_cod_conductor)
+                | Q(apellido_materno__istartswith=search_cod_conductor)
                 | Q(licencia__istartswith=search_cod_conductor)
             )
         return queryset.order_by("nombre", "apellido_paterno")
