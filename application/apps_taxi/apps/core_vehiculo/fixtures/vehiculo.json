@@ -1,0 +1,2192 @@
+[
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00001",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 60,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00002",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 61,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00003",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 62,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00004",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 63,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00005",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 64,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00006",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 65,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00007",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 66,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00008",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 67,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00009",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 68,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00010",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 69,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00011",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 70,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00012",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 71,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00013",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 72,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00014",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 73,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00015",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 74,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00016",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 75,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00017",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 76,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00018",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 77,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00019",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 78,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00020",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 79,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00021",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 80,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00022",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 81,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00023",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 82,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00024",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 83,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00025",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 84,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00026",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 85,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00027",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 86,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00028",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 87,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00029",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 88,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00030",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 89,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00031",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 90,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00032",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 91,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00033",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 92,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00034",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 93,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00035",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 94,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00036",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 95,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00037",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 96,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00038",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 97,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00039",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 98,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00040",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 99,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00041",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 100,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00042",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 101,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00043",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 102,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00044",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 103,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00045",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 104,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00046",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 105,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00047",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 106,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00048",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 107,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00049",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 108,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00050",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 109,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00051",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 110,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00052",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 111,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00053",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 112,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00054",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 113,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00055",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 114,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00056",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 115,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00057",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 116,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00058",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 117,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00059",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 118,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00060",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 119,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00061",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 120,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00062",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 121,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00063",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 122,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00064",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 123,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00065",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 124,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00066",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 125,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00067",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 126,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00068",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 127,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00069",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 128,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00070",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 129,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00071",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 130,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00072",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 131,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00073",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 132,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00074",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 133,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00075",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 134,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00076",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 135,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00077",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 136,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00078",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 137,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00079",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 138,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00080",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 139,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00081",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 140,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00082",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 141,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00083",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 142,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00084",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 143,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00085",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 144,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00086",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 145,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00087",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 146,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00088",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 147,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00089",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 148,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00090",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 149,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00091",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 150,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00092",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 151,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00093",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 152,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00094",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 153,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00095",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 154,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00096",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 155,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00097",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 156,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00098",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 157,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00099",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 158,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00100",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 159,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00101",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 160,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00102",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 161,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00103",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 162,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00104",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 163,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00105",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 164,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00106",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 165,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00107",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 166,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00108",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 167,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00109",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 168,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00110",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 169,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00111",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 170,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00112",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 171,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00113",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 172,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00114",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 173,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00115",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 174,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00116",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 175,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00117",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 176,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00118",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 177,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00119",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 178,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00120",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 179,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00121",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 180,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00122",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 181,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00123",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 182,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00124",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 183,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00125",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 184,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00126",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 185,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00127",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 186,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00128",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 187,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00129",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 188,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00130",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 189,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00131",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 190,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00132",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 191,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00133",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 192,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00134",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 193,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00135",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 194,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00136",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 195,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00137",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 196,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00138",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 197,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00139",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 198,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00140",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 199,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00141",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 200,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00142",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 201,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00143",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 202,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00144",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 203,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00145",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 204,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+},
+{
+  "model": "core_vehiculo.vehiculo",
+  "pk": "CAR00146",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:54:22.722Z",
+    "modified": "2024-09-21T23:54:22.722Z",
+    "nom_vehiculo": 205,
+    "descripcion": "Ford",
+    "estado_vehiculo": "03",
+    "estado_alquilado": "03",
+    "para_alquiler": true
+  }
+}
+]

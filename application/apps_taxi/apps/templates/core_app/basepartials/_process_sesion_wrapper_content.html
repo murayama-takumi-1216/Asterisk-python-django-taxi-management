@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="col-12">
+          <h2>Turnos para activar</h2>
+          <hr>
+          <div class="row">
+            {% for turno in turnos_operador %}
+              <div class="col-3">
+                <div class="card">
+                  <div class="card-body border border-info" style="background-color: #03BFCA25 !important;">
+                    <div class="card-title border-bottom border-info">
+                      <span class="text-black-50">{{ turno.fecha_programacion|date:"Y/m/d" }}</span>
+                      {{ turno.horario.nom_horario }}
+                      [{{ turno.horario.inicio_horario }} - {{ turno.horario.fin_horario }}]
+                      | <span class="text-black-50">{{ turno.get_estado_turno_display }}</span>
+                    </div>
+                    <p class="card-text">{{ turno.fecha_programacion }}</p>
+                    <p class="card-text">
+                      <span class="label label-info">Programación: </span>
+                      {{ turno.fecha_programacion }} <span>hora inicio </span> {{ turno.hora_programacion }}
+                    </p>
+                    <p class="card-text">
+                      <span class="label label-info">[Inicio - Final]:</span>
+                      [{{ turno.hora_inicio|default_if_none:'*' }} - {{ turno.hora_fin|default_if_none:'*' }}]
+                    </p>
+                    {% if turno_operador_select.estado_turno == '03' %}
+                      {% if turno_operador_select.id == turno.id %}
+                        <button class="btn btn-info btnIniciarTurnoOperador"
+                                data-horario="{{ turno.horario.nom_horario }}"
+                                data-fecha="{{ turno.fecha_programacion|date:"Y/m/d" }}"
+                                data-codigoturno="{{ turno.id }}">Ingresar turno
+                        </button>
+                      {% endif %}
+                    {% else %}
+                      {% if turno.estado_turno == '04' %}
+                        <button class="btn btn-primary btnIniciarTurnoOperador"
+                                data-horario="{{ turno.horario.nom_horario }}"
+                                data-fecha="{{ turno.fecha_programacion|date:"Y/m/d" }}"
+                                data-codigoturno="{{ turno.id }}">Volver abrir turno
+                        </button>
+                      {% endif %}
+                      {% if turno.estado_turno == '02' %}
+                        <button class="btn btn-info btnIniciarTurnoOperador"
+                                data-horario="{{ turno.horario.nom_horario }}"
+                                data-fecha="{{ turno.fecha_programacion|date:"Y/m/d" }}"
+                                data-codigoturno="{{ turno.id }}">Iniciar turno
+                        </button>
+                      {% endif %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

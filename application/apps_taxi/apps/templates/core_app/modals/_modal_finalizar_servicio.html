@@ -1,0 +1,159 @@
+<div class="modal" id="bs-finalizar-servicio-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Detalle de servicio</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_finalizar_servicio">
+          <input type="hidden" id="id_fin_serv_codigo_servicio" name="codigo_servicio">
+          <div class="row">
+            <div class="col-6">
+              <fieldset class="form-group form-group-sm border border-primary p-2 mb-1"
+                        style="background-color: #FB967A25 !important;">
+                <legend class="w-auto badge badge-primary">Datos del paciente</legend>
+                <div class="row mb-1">
+                  <label class="col-2 col-form-label">Nombres</label>
+                  <div class="col-10">
+                    <input type="text" id="id_fin_serv_cliente_nombres" name="nombres" class="form-control"
+                           placeholder="Nombres" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <label class="col-2 col-form-label">Apellidos</label>
+                  <div class="col-5">
+                    <input type="text" id="id_fin_serv_cliente_apellido_paterno" name="apellido_paterno"
+                           class="form-control"
+                           placeholder="Paterno" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-5">
+                    <input type="text" id="id_fin_serv_cliente_apellido_materno" name="apellido_materno"
+                           class="form-control"
+                           placeholder="Materno" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <label class="col-2 col-form-label">Teléfono</label>
+                  <div class="col-4">
+                    <input type="text" id="id_fin_serv_cliente_telefono" name="telefono" class="form-control"
+                           placeholder="Celular" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-2 col-form-label">Genero</label>
+                  <div class="col-4">
+                    <select id="id_fin_serv_cliente_genero" name="genero" class="form-control"
+                            placeholder="Genero" disabled="disabled">
+                      <option value="1">Masculino</option>
+                      <option value="2">Femenino</option>
+                      <option value="3">No especifica</option>
+                    </select>
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="col-6">
+              <fieldset class="form-group form-group-sm border border-success p-2 mb-1"
+                        style="background-color: #01C29325 !important;">
+                <legend class="w-auto badge badge-success">Datos del servicio</legend>
+                <div class="row mb-1">
+                  <label class="col-2 col-form-label">Origen</label>
+                  <div class="col-10">
+                    <input type="text" id="id_fin_serv_servicio_ref_origen" name="ref_origen" class="form-control"
+                           placeholder="Origen" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <label class="col-2 col-form-label">Destino</label>
+                  <div class="col-10">
+                    <input type="text" id="id_fin_serv_servicio_ref_destino" name="ref_destino" class="form-control"
+                           placeholder="Destino" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <label class="col-2 col-form-label">Hora</label>
+                  <div class="col-4">
+                    <input type="time" id="id_fin_serv_servicio_hora_prog" name="hora_prog" class="form-control"
+                           placeholder="Hora" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-2 col-form-label">$/.</label>
+                  <div class="col-4">
+                    <input type="number" id="id_fin_serv_servicio_monto" name="monto" class="form-control" min="0"
+                           max="1000"
+                           step="0.10" placeholder="Monto" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border border-cyan p-2"
+                        style="background-color: #03BFCA20 !important;">
+                <legend class="w-auto badge badge-cyan">Datos de finalización de servicio</legend>
+                <div class="row mb-1">
+                  <div class="col-4">
+                    <div class="row">
+                      <label class="col-4 col-form-label">Hora inicio</label>
+                      <div class="col-8">
+                        <input type="time" name="hora_inicio" id="id_fin_serv_hora_inicio" step="60"
+                               class="form-control"
+                               placeholder="Hora Inicio" disabled="disabled">
+                        <small class="valid-feedback"> Error en este campo. </small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-4">
+                    <div class="row">
+                      <label class="col-4 col-form-label">Hora fin</label>
+                      <div class="col-8">
+                        <input type="time" name="hora_fin" id="id_fin_serv_hora_fin" step="60" class="form-control"
+                               placeholder="Hora Finalización" disabled="disabled">
+                        <small class="valid-feedback"> Error en este campo. </small>
+                      </div>
+                    </div>
+                  </div>
+{#                  <div class="col-4">#}
+{#                    <div class="row">#}
+{#                      <div class="col-6 text-center">#}
+{#                        <input type="hidden" name="check_finalizar" id="id_fin_serv_checkfinalizar" value="">#}
+{#                        <button type="button" id="btnFinServCheckFinalizar"#}
+{#                                class="btn btn-sm btn-secondary border-cyan" disabled="disabled"#}
+{#                        ><i class="far fa-square"></i> Finalizar#}
+{#                        </button>#}
+{#                        <input type="hidden" name="check_cancelar" id="id_fin_serv_checkcancelar" value="">#}
+{#                        <button type="button" id="btnFinServCheckCancelar"#}
+{#                                class="btn btn-sm btn-secondary border-cyan" disabled="disabled"#}
+{#                        ><i class="far fa-square"></i> Cancelar#}
+{#                        </button>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+{#        <button type="button" class="btn btn-info waves-effect text-left"#}
+{#                id="btnFinalizarServicioGuardar" disabled="disabled">Guardar#}
+{#        </button>#}
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnFinalizarServicioCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

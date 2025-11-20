@@ -1,0 +1,82 @@
+{% extends "layouts/login.html" %}
+{% load static i18n %}
+
+
+{% block body_page_wrapper_content %}
+  <div class="row justify-content-center">
+    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <div style="background-image:url({% static 'assets/images/background/login-register.jpg' %});">
+            <div class="card border-0 m-0">
+              <div class="card-body">
+                <div class="text-center">
+                  <h3 class="m-b-20">{% trans "Confirm Email Address" %}</h3>
+
+                  {% if confirmation %}
+                    <p class="m-b-20">
+                      {% blocktrans with confirmation.email_address.email as email %}Please confirm that <strong>{{ email }}</strong> is an email address for user {{ confirmation.email_address.user }}.{% endblocktrans %}
+                    </p>
+
+                    <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                      {% csrf_token %}
+                      <button type="submit" class="btn btn-success btn-lg">
+                        <i class="fa fa-check"></i> {% trans "Confirm" %}
+                      </button>
+                    </form>
+
+                    <div class="m-t-20">
+                      <a href="{% url 'core_app:login' %}" class="text-info">
+                        <i class="fa fa-arrow-left"></i> {% trans "Back to Login" %}
+                      </a>
+                    </div>
+                  {% else %}
+                    <div class="alert alert-danger">
+                      <i class="fa fa-exclamation-triangle fa-3x m-b-10"></i>
+                      <p>
+                        {% blocktrans %}This email confirmation link expired or is invalid. Please request a new one.{% endblocktrans %}
+                      </p>
+                    </div>
+
+                    <div class="m-t-20">
+                      <a href="{% url 'core_app:register' %}" class="btn btn-info">
+                        <i class="fa fa-user-plus"></i> {% trans "Sign Up Again" %}
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body_page_wrapper_content %}
+
+
+{% block css %}
+  <link href="{% static 'assets/app_dist/css/pages/login-register-lock.css' %}" rel="stylesheet">
+  <style>
+    .alert-danger {
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+      color: #721c24;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .alert-danger i {
+      color: #dc3545;
+    }
+  </style>
+{% endblock css %}
+
+
+{% block inline_javascript %}
+  <script type="text/javascript">
+    $(function () {
+      $(".preloader").fadeOut();
+    });
+  </script>
+{% endblock inline_javascript %}

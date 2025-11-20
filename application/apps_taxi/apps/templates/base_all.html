@@ -1,0 +1,73 @@
+{% load static i18n %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <title>
+    {% block title %}
+      apps
+    {% endblock title %}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Taxi APP"/>
+  <meta name="author" content="Rasec"/>
+  <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/modules/sweetalert2/dist/sweetalert2.min.css' %}">
+  <link href="{% static 'assets/app_dist/css/style.css' %}?{{ version_control_js }}" rel="stylesheet"/>
+  <link href="{% static 'css/project.css' %}?{{ version_control_js }}" rel="stylesheet"/>
+  {% block css %}
+
+  {% endblock css %}
+  {% block javascript %}
+  {% endblock javascript %}
+</head>
+<body class="{% block bodyclass %}{% endblock bodyclass %}">
+<div class="preloader">
+  <div class="loader">
+    <div class="loader__figure"></div>
+    <p class="loader__label">APP</p>
+  </div>
+</div>
+
+<div id="main-wrapper">
+  {% block body %}
+
+  {% endblock body %}
+</div>
+
+{% block modal %}
+{% endblock modal %}
+
+<script src="{% static 'js/constantes.js' %}?{{ version_control_js }}"></script>
+<script src="{% static 'js/project_init.js' %}?{{ version_control_js }}"></script>
+<script src="{% static 'assets/modules/jquery/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/modules/popper/popper.min.js' %}"></script>
+<script src="{% static 'assets/modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/app_dist/js/perfect-scrollbar.jquery.min.js' %}"></script>
+<script src="{% static 'assets/app_dist/js/waves.js' %}"></script>
+<script src="{% static 'assets/app_dist/js/sidebarmenu.js' %}"></script>
+<script src="{% static 'assets/modules/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+<script src="{% static 'assets/modules/sparkline/jquery.sparkline.min.js' %}"></script>
+<script src="{% static 'assets/app_dist/js/custom.min.js' %}"></script>
+<script src="{% static 'assets/modules/sweetalert2/dist/sweetalert2.min.js' %}"></script>
+<script src="{% static 'js/project_fin.js' %}?{{ version_control_js }}"></script>
+<script type="text/javascript">
+  const urlAccessList = {
+    dashboardPage: "{% url 'common:load_page' %}",
+    dashboardLogin: "{% url 'core_app:login' %}",
+    access: {
+      logIn: "{% url 'core_app:core_app_api:login' %}",
+      logOut: "{% url 'core_app:core_app_api:logout' %}",
+      loadTimeServer: "{% url 'core_app:core_app_api:load_time_server' %}",
+    }
+  };
+</script>
+{% block base_javascript %}
+
+{% endblock base_javascript %}
+
+{% block inline_javascript %}
+{% endblock inline_javascript %}
+</body>
+</html>

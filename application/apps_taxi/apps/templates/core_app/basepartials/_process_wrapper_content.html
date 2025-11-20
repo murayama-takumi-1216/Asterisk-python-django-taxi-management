@@ -1,0 +1,98 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body" style="min-height: 380px; overflow: auto;background-color: #FB967A25 !important;">
+                <h4 class="card-title">Llamadas entrantes <span
+                  class="small text-black-50">(contestar / Devolver la llamada)</span>
+                  <div class="btn-group btn-group-sm">
+                    <button type="button" id="bntRefreshBackLlamadas"
+                            class="btn waves-effect waves-light btn-primary"><i class="fas fa-sync-alt"></i> refrescar
+                    </button>
+                    <button type="button" id="bntTurnoConductoresView"
+                            class="btn waves-effect waves-light btn-primary"><i class="fas fa-car"></i> Conductores
+                    </button>
+                    <button type="button" data-codigocliente="0" data-numero_id="0" id="bntAgregarServicio"
+                            class="btn waves-effect waves-light btn-success"><i
+                      class="fas fa-plus"></i> Nuevo Servicio
+                    </button>
+                  </div>
+                </h4>
+                <div class="tab-content table-responsive table-sm">
+                  <table class="table table-sm table-striped w-100 color-table primary-table"
+                         id="lista-llamada-cliente">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>#</th>
+                      <th>Usuario</th>
+                      <th>Ultima ruta frecuente</th>
+                      <th>Acciones</th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body" style="min-height: 380px; overflow: auto;background-color: #01C29325 !important;">
+                <h4 class="card-title">Asignar taxi <span class="small text-black-50">(Asignar Taxi)</span></h4>
+                <div class="tab-content table-responsive table-sm">
+                  <table class="table table-sm table-striped w-100 color-table success-table"
+                         id="lista-asignar-taxi">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>#</th>
+                      <th>Cliente</th>
+                      <th>Hora</th>
+                      <th>Ruta (inicio/Fin)</th>
+                      <th>Acciones</th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body" style="background-color: #03BFCA25 !important;">
+                <h4 class="card-title">Servicios pendiente y en atención <span
+                  class="small text-black-50">(Estan asignados taxi o están en atención)</span></h4>
+                <div class="tab-content table-responsive table-sm">
+                  <table class="table table-sm table-striped w-100 color-table info-table"
+                         id="lista-pendientes-en-atencion">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>#</th>
+                      <th>Telefono</th>
+                      <th>Cliente</th>
+                      <th>Hora</th>
+                      <th>Ruta (Incio <i class="fa fa-arrow-right"> </i> Fin)</th>
+                      <th>Vehículo - Conductor</th>
+                      <th>Estado</th>
+                      <th>Opciones</th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

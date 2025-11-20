@@ -1,0 +1,44 @@
+{% extends "base_all.html" %}
+
+{% block title %}Login{% endblock title %}
+
+{#{% block css %}#}
+{#{% endblock css %}#}
+
+{#{% block javascript %}#}
+{#{% endblock javascript %}#}
+
+{% block bodyclass %}fix-header single-column fixed-layout card-no-border fix-sidebar skin-green{% endblock bodyclass %}
+
+{% block body %}
+  {% block body_topbar %}
+    <header class="topbar">
+      {% include 'basepartials/login_topbar.html' %}
+    </header>
+  {% endblock body_topbar %}
+
+  {% block body_left_sidebar %}
+  {% endblock body_left_sidebar %}
+
+  {% block body_page_wrapper %}
+    <div class="page-wrapper">
+      <div class="container-fluid">
+        <div class="row page-titles"></div>
+
+        {% block body_page_wrapper_content %}
+        {% endblock body_page_wrapper_content %}
+
+        {% include 'basepartials/page_wrapper_right_sidebar.html' %}
+      </div>
+    </div>
+  {% endblock body_page_wrapper %}
+
+  {% block body_footer %}
+  {% endblock body_footer %}
+{% endblock body %}
+
+{#{% block modal %}#}
+{#{% endblock modal %}#}
+
+{#{% block inline_javascript %}#}
+{#{% endblock inline_javascript %}#}

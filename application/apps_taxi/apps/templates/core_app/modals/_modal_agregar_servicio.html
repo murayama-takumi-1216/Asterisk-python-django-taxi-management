@@ -1,0 +1,105 @@
+<div class="modal" id="bs-agregar-servicio-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Agregar nuevo servicio</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_agregar_nuevo_servicio">
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border border-primary p-2 mb-1"
+                        style="background-color: #FB967A25 !important;">
+                <input type="hidden" id="id_ns_cliente_codigo" name="codigo">
+                <legend class="w-auto badge badge-primary">CLIENTE</legend>
+                <div class="row mb-1 d-none">
+                  <label class="col-2 col-form-label">Nombres</label>
+                  <div class="col-10">
+                    <input type="text" id="id_ns_cliente_nombres" name="nombres" class="form-control"
+                           placeholder="Nombres" maxlength="60">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1 d-none">
+                  <label class="col-2 col-form-label">Apellidos</label>
+                  <div class="col-5">
+                    <input type="text" id="id_ns_cliente_apellido_paterno" name="apellido_paterno" class="form-control"
+                           placeholder="Paterno" maxlength="50">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-5">
+                    <input type="text" id="id_ns_cliente_apellido_materno" name="apellido_materno" class="form-control"
+                           placeholder="Materno" maxlength="50">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-3 col-form-label">Teléfono</label>
+                  <div class="col-9">
+                    <input type="text" id="id_ns_cliente_telefono" name="telefono" class="form-control"
+                           placeholder="Celular" maxlength="15">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-2 col-form-label d-none">Genero</label>
+                  <div class="col-4 d-none">
+                    <select id="id_ns_cliente_genero" name="genero" class="form-control" placeholder="Genero">
+                      <option value="1">Masculino</option>
+                      <option value="2">Femenino</option>
+                      <option value="3">No especifica</option>
+                    </select>
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-12 d-none">
+              <fieldset class="form-group form-group-sm border border-success p-2 mb-1"
+                        style="background-color: #01C29325 !important;">
+                <legend class="w-auto badge badge-success">SERVICIO</legend>
+                <div class="row mb-1">
+                  <label class="col-2 col-form-label">Origen</label>
+                  <div class="col-10">
+                    <input type="text" id="id_ns_servicio_ref_origen" name="ref_origen" class="form-control"
+                           placeholder="Origen" maxlength="150">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <label class="col-2 col-form-label">Destino</label>
+                  <div class="col-10">
+                    <input type="text" id="id_ns_servicio_ref_destino" name="ref_destino" class="form-control"
+                           placeholder="Destino" maxlength="150">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-2 col-form-label">Hora</label>
+                  <div class="col-4">
+                    <input type="time" id="id_ns_servicio_hora_prog" step="60" name="hora_prog" class="form-control"
+                           placeholder="Hora">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-2 col-form-label">$/.</label>
+                  <div class="col-4">
+                    <input type="number" id="id_ns_servicio_monto" name="monto" class="form-control" min="0" max="1000"
+                           step="0.10" min="1" max="120"
+                           placeholder="Monto">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left" id="btnAgregarServicioGuardar">Guardar</button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnAgregarServicioCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

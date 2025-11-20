@@ -1,0 +1,105 @@
+<div class="modal" id="bs-turno-conductor-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Conductores activos</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_atender_llamada_nuevo">
+          <input type="hidden" id="id_codigo_llamada" name="codigo_llamada">
+          <input type="hidden" id="id_codigo_servicio" name="codigo_servicio">
+          <div class="row mt-2 pb-2" style="background-color: #03BFCA20 !important;">
+            <input type="hidden" id="id_servicio_turno" name="turno">
+            <div class="col-6">
+              <fieldset class="form-group form-group-sm border-cyan border p-2 mb-0">
+                <legend class="w-auto badge badge-cyan">CONDUCTORES</legend>
+                <div class="row">
+                  <div class="col-12">
+                    <div style="min-height: 200px; overflow: auto;" data-offset="0"
+                         class="position-relative mb-1">
+                      <div class="tab-content table-responsive">
+                        <table data-toggle="table" data-height="250" data-mobile-responsive="true"
+                               class="table table-sm table-striped w-100 compact" id="lista-turno-conductor-01">
+                          <thead class="table-cyan">
+                          <tr>
+                            <th></th>
+                            <th>Conductor</th>
+                            <th>Vehiculo</th>
+                            <th>Teléfono</th>
+                            <th>Atendidos|Cancelados</th>
+                          </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="col-6">
+              <fieldset class="form-group form-group-sm border-cyan border p-2 mb-0">
+                <legend class="w-auto badge badge-cyan">CONDUCTORES</legend>
+                <div class="row">
+                  <div class="col-12">
+                    <div style="min-height: 200px; overflow: auto;" data-offset="0"
+                         class="position-relative mb-1">
+                      <div class="tab-content table-responsive">
+                        <table data-toggle="table" data-height="250" data-mobile-responsive="true"
+                               class="table table-sm table-striped w-100 compact" id="lista-turno-conductor-02">
+                          <thead class="table-cyan">
+                          <tr>
+                            <th></th>
+                            <th>Conductor</th>
+                            <th>Vehiculo</th>
+                            <th>Teléfono</th>
+                            <th>Atendidos|Cancelados</th>
+                          </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12" id="detalle-servicios-turnoconductor">
+              <fieldset class="form-group form-group-sm border border-info p-2 mb-0 mt-2"
+                        style="background-color: #03a9f315 !important;">
+                <legend class="w-auto badge badge-info"
+                        id="detalle-servicios-turnoconductor-leyenda">Itinerario del conductor
+                </legend>
+                <input type="hidden" id="id_show_turno_dataid" name="show_turno_dataid">
+                <div class="position-relative mb-1">
+                  <div class="tab-content table-responsive">
+                    <table data-toggle="table" data-height="250" data-mobile-responsive="true"
+                           class="table table-sm table-striped w-100" id="lista-servicios-del-conductor">
+                      <thead class="table-info">
+                      <tr>
+                        <th></th>
+                        <th>#</th>
+                        <th>Cliente</th>
+                        <th>hora [inicio-Fin]</th>
+                        <th>Ruta</th>
+                        <th>Estado</th>
+                      </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger waves-effect text-left" id="bntTurnoConductoresCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

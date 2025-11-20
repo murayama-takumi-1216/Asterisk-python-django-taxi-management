@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="btn-group" role="group" aria-label="Filtros">
+          <a href="{% url 'core_app_reportes:print_reportes_conductores_activos' %}" target="_blank"
+             class="btn btn-sm border border-success btn-success"> <i class="fas fa-table"></i> Exportar </a>
+        </div>
+      </div>
+      <div class="card-body">
+
+        <div class="row mt-2 pb-2" style="background-color: #03BFCA20 !important;">
+          <div class="col-6">
+            <fieldset class="form-group form-group-sm border-cyan border p-2 mb-0">
+              <legend class="w-auto badge badge-cyan">CONDUCTORES</legend>
+              <div class="row">
+                <div class="col-12">
+                  <div style="min-height: 200px; overflow: auto;" data-offset="0"
+                       class="position-relative mb-1">
+                    <div class="tab-content table-responsive">
+                      <table data-toggle="table" data-height="250" data-mobile-responsive="true"
+                             class="table table-sm table-striped w-100 compact" id="lista-conductores-activos-01">
+                        <thead class="table-cyan">
+                        <tr>
+                          <th></th>
+                          <th>Conductor</th>
+                          <th>Vehiculo</th>
+                          <th>Atendidos|Cancelados</th>
+                        </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="col-6">
+            <fieldset class="form-group form-group-sm border-cyan border p-2 mb-0">
+              <legend class="w-auto badge badge-cyan">CONDUCTORES</legend>
+              <div class="row">
+                <div class="col-12">
+                  <div style="min-height: 200px; overflow: auto;" data-offset="0"
+                       class="position-relative mb-1">
+                    <div class="tab-content table-responsive">
+                      <table data-toggle="table" data-height="250" data-mobile-responsive="true"
+                             class="table table-sm table-striped w-100 compact" id="lista-conductores-activos-02">
+                        <thead class="table-cyan">
+                        <tr>
+                          <th></th>
+                          <th>Conductor</th>
+                          <th>Vehiculo</th>
+                          <th>Atendidos|Cancelados</th>
+                        </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

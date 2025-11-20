@@ -1,0 +1,359 @@
+[
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 1,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T18:29:08.595Z",
+    "modified": "2024-10-06T18:29:08.595Z",
+    "fecha_inicio": "2024-10-06T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000002",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 1
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 2,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T18:31:19.080Z",
+    "modified": "2024-10-06T18:31:19.080Z",
+    "fecha_inicio": "2024-10-06T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000001",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 2
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 3,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T18:32:01.110Z",
+    "modified": "2024-10-06T18:32:01.110Z",
+    "fecha_inicio": "2024-10-06T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000004",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 3
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 4,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T18:32:45.182Z",
+    "modified": "2024-10-06T18:32:45.182Z",
+    "fecha_inicio": "2024-10-06T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000003",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 4
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 5,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T18:35:24.451Z",
+    "modified": "2024-10-06T18:35:24.451Z",
+    "fecha_inicio": "2024-10-06T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000001",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 5
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 6,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:27:42.337Z",
+    "modified": "2024-10-09T03:27:42.337Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000004",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 6
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 7,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:32:15.945Z",
+    "modified": "2024-10-09T03:32:15.945Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000003",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 7
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 8,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:32:35.574Z",
+    "modified": "2024-10-09T03:32:35.574Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000001",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 8
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 9,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:32:55.992Z",
+    "modified": "2024-10-09T03:32:55.992Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000004",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 9
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 10,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:33:15.621Z",
+    "modified": "2024-10-09T03:33:15.621Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000002",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 10
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 11,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:33:35.816Z",
+    "modified": "2024-10-09T03:33:35.816Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000001",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 11
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 12,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:33:58.189Z",
+    "modified": "2024-10-09T03:33:58.189Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000004",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 12
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 13,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:34:18.182Z",
+    "modified": "2024-10-09T03:34:18.182Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000002",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 13
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 14,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:34:35.526Z",
+    "modified": "2024-10-09T03:34:35.526Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000001",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 14
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 15,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:34:51.212Z",
+    "modified": "2024-10-09T03:34:51.212Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000004",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 15
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 16,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:35:38.917Z",
+    "modified": "2024-10-09T03:35:38.917Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000002",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 16
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 17,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:36:05.032Z",
+    "modified": "2024-10-09T03:36:05.032Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000003",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 17
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 18,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:36:52.019Z",
+    "modified": "2024-10-09T03:36:52.019Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000004",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 18
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 19,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:37:38.519Z",
+    "modified": "2024-10-09T03:37:38.519Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000002",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 19
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 20,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:38:07.857Z",
+    "modified": "2024-10-09T03:38:07.857Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000003",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 20
+  }
+},
+{
+  "model": "core_operador.cathorariooperardordetalle",
+  "pk": 21,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-09T03:38:27.265Z",
+    "modified": "2024-10-09T03:38:27.265Z",
+    "fecha_inicio": "2024-10-08T05:00:00Z",
+    "fecha_fin": null,
+    "activo": true,
+    "confirmado": true,
+    "operador": "OPE000002",
+    "cat_horario": "GH001_001",
+    "grupo_horario_detalle": 21
+  }
+}
+]

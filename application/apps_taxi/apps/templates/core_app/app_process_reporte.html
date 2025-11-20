@@ -1,0 +1,67 @@
+{% extends "layouts/intranet.html" %}
+
+{% load static i18n %}
+
+{% block page_wrapper_title %}
+  <div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+      <h4 class="text-themecolor">Reporte de turnos de operador</h4>
+    </div>
+    <div class="col-md-7 align-self-center text-right">
+      <div class="d-flex justify-content-end align-items-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Reporte turno operador</a></li>
+          <li class="breadcrumb-item active">Lista de turnos</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+{% endblock page_wrapper_title %}
+
+{% block page_wrapper_content %}
+  {% include 'core_app/basepartials/_process_reporte_wrapper_content.html' %}
+{% endblock page_wrapper_content %}
+
+{% block modal %}
+{% endblock modal %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/datatables.net-bs4/css/responsive.dataTables.min.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/datatable-ext/css/base.css' %}">
+{% endblock css %}
+
+
+{% block base_javascript %}
+  <script
+    src="{% static 'assets/modules/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net-bs4/js/dataTables.responsive.min.js' %}"></script>
+{% endblock base_javascript %}
+
+{% block inline_javascript %}
+  <script>
+    const urlList = {
+      dashboardPage: "{% url 'core_app:process' %}",
+      access: {
+        logIn: "{% url 'core_app:core_app_api:login' %}",
+        logOut: "{% url 'core_app:core_app_api:logout' %}",
+      },
+      turnoOperador: {
+        listTurnos: "{% url 'core_app:core_app_api:turnos_operador_gestion-list' %}",
+      },
+      sesion:{
+        iniciarTurnoOperador: "{% url 'core_app:core_app_api:turnos_operador_iniciar_turno-detail' '0000' %}",
+        cerrarTurnoOperador: "{% url 'core_app:core_app_api:turnos_operador_cerrar_turno-detail' '0000' %}"
+      },
+      dataTablesES: "{% static 'assets/datatable-ext/language/spanish.json' %}",
+    };
+  </script>
+  <script src="{% static 'js/core_servicio/reporte_turnos_operador.js' %}?{{ version_control_js }}"></script>
+{% endblock inline_javascript %}

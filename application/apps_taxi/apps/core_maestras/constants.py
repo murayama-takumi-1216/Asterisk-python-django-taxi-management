@@ -1,0 +1,17 @@
+# dia de semana (lunes = 1.. domingo = 7 -> ISO 8601 )
+DIA_SEMANA_LUNES = 1
+DIA_SEMANA_MARTES = 2
+DIA_SEMANA_MIERCOLES = 3
+DIA_SEMANA_JUEVES = 4
+DIA_SEMANA_VIERNES = 5
+DIA_SEMANA_SABADO = 6
+DIA_SEMANA_DOMINGO = 7
+DIA_SEMANA_CHOICES = (
+    (DIA_SEMANA_LUNES, "Lunes"),
+    (DIA_SEMANA_MARTES, "Martes"),
+    (DIA_SEMANA_MIERCOLES, "Miércoles"),
+    (DIA_SEMANA_JUEVES, "Jueves"),
+    (DIA_SEMANA_VIERNES, "Viernes"),
+    (DIA_SEMANA_SABADO, "Sábado"),
+    (DIA_SEMANA_DOMINGO, "Domingo"),
+)

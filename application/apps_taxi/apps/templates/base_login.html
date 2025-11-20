@@ -1,0 +1,90 @@
+{% load static i18n %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <title>
+    {% block title %}
+      apps
+    {% endblock title %}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Taxi APP"/>
+  <meta name="author" content="Rasec"/>
+  <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}"/>
+  <link href="{% static 'assets/app_dist/css/style.min.css' %}" rel="stylesheet"/>
+  {% block css %}
+
+  {% endblock css %}
+  {% block javascript %}
+
+  {% endblock javascript %}
+</head>
+<body class="{% block bodyclass %}{% endblock bodyclass %}">
+<div class="preloader">
+  <div class="loader">
+    <div class="loader__figure"></div>
+    <p class="loader__label">Taxi APP</p>
+  </div>
+</div>
+
+<div id="main-wrapper">
+  {% block body %}
+    <header class="topbar">
+      {% block body_topbar %}
+        {% include 'basepartials/login_topbar.html' %}
+      {% endblock body_topbar %}
+    </header>
+
+    <aside class="left-sidebar">
+      {% block body_left_sidebar %}
+        <div class="scroll-sidebar">
+          {% include 'basepartials/login_sidebar_left.html' %}
+        </div>
+      {% endblock body_left_sidebar %}
+    </aside>
+
+    <div class="page-wrapper">
+      {% block body_page_wrapper %}
+        <div class="container-fluid">
+        {% include 'basepartials/login_page_wraper.html' %}
+        </div>
+      {% endblock body_page_wrapper %}
+    </div>
+
+    <footer class="footer">
+      {% block body_footer %}
+        {% include 'basepartials/footer.html' %}
+      {% endblock body_footer %}
+    </footer>
+
+  {% endblock body %}
+</div>
+
+{% block modal %}
+{% endblock modal %}
+
+<script src="{% static 'assets/modules/jquery/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/modules/popper/popper.min.js' %}"></script>
+<script src="{% static 'assets/modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/app_dist/js/perfect-scrollbar.jquery.min.js' %}"></script>
+<script src="{% static 'assets/app_dist/js/waves.js' %}"></script>
+<script src="{% static 'assets/app_dist/js/sidebarmenu.js' %}"></script>
+<script src="{% static 'assets/modules/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+<script src="{% static 'assets/modules/sparkline/jquery.sparkline.min.js' %}"></script>
+<script src="{% static 'assets/app_dist/js/custom.min.js' %}"></script>
+
+{% block inline_javascript %}
+  {% comment %}
+    Script tags with only code, no src (defer by default). To run
+    with a "defer" so that you run inline code:
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        /* Run whatever you want */
+      });
+    </script>
+    {% endcomment %}
+{% endblock inline_javascript %}
+</body>
+</html>

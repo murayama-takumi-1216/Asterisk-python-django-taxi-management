@@ -1,0 +1,79 @@
+{% extends "layouts/intranet.html" %}
+
+{% load static i18n %}
+
+{% block page_wrapper_title %}
+  <div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+      <h4 class="text-themecolor">Consulta de vehículos - simple</h4>
+    </div>
+    <div class="col-md-7 align-self-center text-right">
+      <div class="d-flex justify-content-end align-items-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Reportes</a></li>
+          <li class="breadcrumb-item active">Servicios - conductor</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+{% endblock page_wrapper_title %}
+
+{% block page_wrapper_content %}
+  {% include 'core_app_reportes/basepartials/_reportes_celular_conductor_wrapper_content.html' %}
+{% endblock page_wrapper_content %}
+
+{% block modal %}
+{#{% include 'core_app_reportes/modals/_modal_reportes.html' %}#}
+{% endblock modal %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/datatables.net-bs4/css/responsive.dataTables.min.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/datatable-ext/css/base.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css' %}">
+  <link href="{% static 'assets/modules/morrisjs/morris.css' %}" rel="stylesheet">
+{% endblock css %}
+
+{% block base_javascript %}
+  <script src="{% static 'assets/modules/moment/moment.js' %}"></script>
+  <script src="{% static 'assets/modules/moment/locale/es-us.js' %}"></script>
+  <script src="{% static 'assets/modules/raphael/raphael-min.js' %}"></script>
+  <script src="{% static 'assets/modules/morrisjs/morris.js' %}"></script>
+  <script src="{% static 'assets/modules/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+  <script src="{% static 'assets/modules/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net-bs4/js/dataTables.responsive.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js' %}"></script>
+{% endblock base_javascript %}
+
+{% block inline_javascript %}
+
+  <script>
+    const urlList = {
+      dashboardPage: "{% url 'core_app:process' %}",
+      access: {
+        logIn: "{% url 'core_app:core_app_api:login' %}",
+        logOut: "{% url 'core_app:core_app_api:logout' %}",
+      },
+      turnoConductor: {
+        listaConductores: "{% url 'core_app_reportes:core_app_reportes_api:turnos_conductor_lista-list' %}",
+        listaRSimpleConductores: "{% url 'core_app_reportes:core_app_reportes_api:turnos_conductor_list_r_simple-list' %}",
+      },
+      servicio: {
+        listServiciosConductor: "{% url 'core_app_reportes:core_app_reportes_api:conductor_servicios_lista-list' %}",
+      },
+      dataTablesES: "{% static 'assets/datatable-ext/language/spanish.json' %}",
+    };
+  </script>
+  <script src="{% static 'js/core_app_reporte/reporte_turno_conduct_r_celular.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_app_reporte/conductores_detalle_servicios.js' %}?{{ version_control_js }}"></script>
+{% endblock inline_javascript %}

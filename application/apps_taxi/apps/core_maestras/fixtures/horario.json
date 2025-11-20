@@ -1,0 +1,50 @@
+[
+{
+  "model": "core_maestras.horario",
+  "pk": "01",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-08-09T22:25:35.865Z",
+    "modified": "2024-08-09T22:25:35.865Z",
+    "nom_horario": "Madrugada",
+    "inicio_horario": "00:00:00",
+    "fin_horario": "08:00:00",
+    "orden_view": 1,
+    "estado": true,
+    "horario_base": true
+  }
+},
+{
+  "model": "core_maestras.horario",
+  "pk": "02",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-08-09T22:24:09.390Z",
+    "modified": "2024-08-09T22:26:30.130Z",
+    "nom_horario": "Mañana",
+    "inicio_horario": "08:00:00",
+    "fin_horario": "16:00:00",
+    "orden_view": 2,
+    "estado": true,
+    "horario_base": true
+  }
+},
+{
+  "model": "core_maestras.horario",
+  "pk": "03",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-08-09T22:25:07.418Z",
+    "modified": "2024-08-09T22:25:07.418Z",
+    "nom_horario": "Tarde",
+    "inicio_horario": "16:00:00",
+    "fin_horario": "00:00:00",
+    "orden_view": 3,
+    "estado": true,
+    "horario_base": true
+  }
+}
+]

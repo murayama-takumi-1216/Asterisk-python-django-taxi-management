@@ -1,0 +1,114 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$N0RyRFZhQWlMTHpNTXNXNzF5ODB1Sw$tyXWuxD/14UaTvNXMaSlPEPb6QryljPnbAhNKF13Tec",
+    "last_login": "2024-10-06T17:30:32.235Z",
+    "is_superuser": true,
+    "username": "admin",
+    "email": "cap@uni.pe",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-09-27T14:46:14.028Z",
+    "name": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$cGVIeEMxVGxBNXg3OUxxa2ZwMkIybQ$G3JdXRnrue3xj+cOgHIR1AR26w2eIxLUxWedrwBVVwI",
+    "last_login": "2024-09-27T18:53:14Z",
+    "is_superuser": false,
+    "username": "brenda.miranda",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-27T17:31:41Z",
+    "name": "",
+    "groups": [
+      5
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$UWVmOFFvWktzR1VFaUFVY3MwZTlGSw$UXcbtL97LaQggmzxRo22hdMcykHo4R6+KiCHBq/IrZo",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jose.ormeno",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-27T17:33:49Z",
+    "name": "",
+    "groups": [
+      5
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$akJHR2EwbktCMkhIWWZaWTdDTkxCTA$qOphlm+aQ1if23rmu4I0I3yfg9GW6rHDzz7Oetw9R10",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ricardo.huaman",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-27T17:35:17Z",
+    "name": "",
+    "groups": [
+      5
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$MmIyM29ObnJvV1ViUDAzaHhFcU5EWQ$cdQvB/iuU1JGOHjmDo/d7xL74qtOy4E97b/O32oBUoA",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "yudith.camilo",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-27T17:36:06Z",
+    "name": "",
+    "groups": [
+      5
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$NXRsWVFjWnR4aENFTTd5VDdIYmtMMg$88fpHxdcTtpnLmrqLmFYaYn8TTEaF1qGoit2/obLGOw",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "testadmin",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-10-06T17:31:30Z",
+    "name": "",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+}
+]

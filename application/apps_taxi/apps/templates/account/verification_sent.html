@@ -1,0 +1,67 @@
+{% extends "layouts/login.html" %}
+{% load static i18n %}
+
+
+{% block body_page_wrapper_content %}
+  <div class="row justify-content-center">
+    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <div style="background-image:url({% static 'assets/images/background/login-register.jpg' %});">
+            <div class="card border-0 m-0">
+              <div class="card-body">
+                <div class="text-center">
+                  <h3 class="m-b-20">{% trans "Verify Your Email Address" %}</h3>
+
+                  <div class="alert alert-success">
+                    <i class="fa fa-envelope-o fa-3x m-b-10"></i>
+                    <p class="m-b-20">
+                      {% blocktrans %}We have sent an email to you for verification. Please click on the link in the email to complete your registration.{% endblocktrans %}
+                    </p>
+                  </div>
+
+                  <p class="text-muted m-b-20">
+                    {% trans "If you don't see the email in your inbox, please check your spam folder." %}
+                  </p>
+
+                  <div class="m-t-20">
+                    <a href="{% url 'core_app:login' %}" class="btn btn-info">
+                      <i class="fa fa-sign-in"></i> {% trans "Go to Login" %}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body_page_wrapper_content %}
+
+
+{% block css %}
+  <link href="{% static 'assets/app_dist/css/pages/login-register-lock.css' %}" rel="stylesheet">
+  <style>
+    .alert-success {
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+      color: #155724;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .alert-success i {
+      color: #28a745;
+    }
+  </style>
+{% endblock css %}
+
+
+{% block inline_javascript %}
+  <script type="text/javascript">
+    $(function () {
+      $(".preloader").fadeOut();
+    });
+  </script>
+{% endblock inline_javascript %}

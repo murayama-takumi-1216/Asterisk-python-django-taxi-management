@@ -1,0 +1,213 @@
+<div class="modal" id="bs-nuevo-operador-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Crear nuevo operador</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_mantener_operador">
+          <input type="hidden" id="id_codigo_operador" name="codigo_operador">
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border border-cyan p-2 mb-1"
+                        style="background-color: #03BFCA25 !important;">
+                <legend class="w-auto badge badge-cyan">OPERADOR</legend>
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Nombres</label>
+                  <div class="col-4">
+                    <input type="text" id="id_operador_nombres" name="nombres" class="form-control"
+                           placeholder="Nombres" maxlength="60">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-1 col-form-label">Apellidos</label>
+                  <div class="col-3">
+                    <input type="text" id="id_operador_apellido_paterno" name="apellido_paterno" class="form-control"
+                           placeholder="Paterno" maxlength="50">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-3">
+                    <input type="text" id="id_operador_apellido_materno" name="apellido_materno" class="form-control"
+                           placeholder="Materno" maxlength="50">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <!--
+                  <label class="col-1 col-form-label">Usuario</label>
+                  <div class="col-3">
+                    <input type="text" id="id_operador_usuario" name="usuario" class="form-control"
+                           placeholder="Nombre de Usuario">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  -->
+                  <label class="col-1 col-form-label">Alias</label>
+                  <div class="col-3">
+                    <input type="text" id="id_operador_alias" name="alias" class="form-control" placeholder="Alias">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                    <input type="hidden" id="id_operador_extension" name="extension">
+                  </div>
+{#                  <label class="col-1 col-form-label">Extensión</label>#}
+{#                  <div class="col-3">#}
+{#                    <input type="text" id="id_operador_extension" name="extension" class="form-control"#}
+{#                           placeholder="Extensión">#}
+{#                    <small class="valid-feedback"> Error en este campo. </small>#}
+{#                  </div>#}
+                </div>
+                <!--
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Clave</label>
+                  <div class="col-4">
+                    <input type="password" id="id_operador_clave" name="clave" class="form-control"
+                           placeholder="Clave">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-2 col-form-label">Repetir Clave</label>
+                  <div class="col-4">
+                    <input type="password" id="id_operador_repetirclave" name="repetirclave" class="form-control"
+                           placeholder="Repetir Clave">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                -->
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left" id="btnMantenerOperadorGuardar">Guardar
+        </button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnMantenerOperadorCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<! --------- crear usuario sistema --------------- -->
+<div class="modal" id="bs-operador-crearusuario-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Crear usuario operador</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_mantener_operador_crearusuario">
+          <input type="hidden" id="id_crearusuario_codigo_operador" name="codigo_operador">
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border border-cyan p-2 mb-1"
+                        style="background-color: #03BFCA25 !important;">
+                <legend class="w-auto badge badge-cyan">CREAR USUARIO DEL OPERADOR</legend>
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Nombres</label>
+                  <div class="col-4">
+                    <input type="text" id="id_crearusuario_operador_nombres" class="form-control" disabled="disabled">
+                  </div>
+                  <label class="col-1 col-form-label">Apellidos</label>
+                  <div class="col-6">
+                    <input type="text" id="id_crearusuario_operador_apellidos" class="form-control" disabled="disabled">
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Usuario</label>
+                  <div class="col-3">
+                    <input type="text" id="id_crearusuario_operador_usuario" name="usuario" class="form-control"
+                           placeholder="Nombre de Usuario" maxlength="30">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-1 col-form-label">Clave</label>
+                  <div class="col-3">
+                    <input type="password" id="id_crearusuario_operador_clave" name="clave" class="form-control"
+                           placeholder="Clave">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-1 col-form-label">Repetir Clv.</label>
+                  <div class="col-3">
+                    <input type="password" id="id_crearusuario_operador_repetirclave" name="repetirclave"
+                           class="form-control"
+                           placeholder="Repetir Clave">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left" id="btnCrearUsuarioOperadorGuardar">Guardar
+        </button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnCrearUsuarioOperadorCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<! --------- cambio de clave --------------- -->
+
+<div class="modal" id="bs-operador-cambiarclave-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Cambiar clave de usuario operador</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_mantener_operador_cambiarclave">
+          <input type="hidden" id="id_cambiarclave_codigo_operador" name="codigo_operador">
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border border-cyan p-2 mb-1"
+                        style="background-color: #03BFCA25 !important;">
+                <legend class="w-auto badge badge-cyan">CAMBIAR CLAVE USUARIO OPERADOR</legend>
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Nombres</label>
+                  <div class="col-4">
+                    <input type="text" id="id_cambiarclave_operador_nombres" class="form-control" disabled="disabled">
+                  </div>
+                  <label class="col-1 col-form-label">Apellidos</label>
+                  <div class="col-6">
+                    <input type="text" id="id_cambiarclave_operador_apellidos" class="form-control" disabled="disabled">
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Usuario</label>
+                  <div class="col-3">
+                    <input type="text" id="id_cambiarclave_operador_usuario" name="usuario" class="form-control"
+                           placeholder="Nombre de Usuario" disabled="disabled">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-1 col-form-label">Clave</label>
+                  <div class="col-3">
+                    <input type="password" id="id_cambiarclave_operador_clave" name="clave" class="form-control"
+                           placeholder="Clave">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-1 col-form-label">Repetir Clv.</label>
+                  <div class="col-3">
+                    <input type="password" id="id_cambiarclave_operador_repetirclave" name="repetirclave"
+                           class="form-control" placeholder="Repetir Clave">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left" id="btnCambiarClaveOperadorGuardar">Guardar
+        </button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnCambiarClaveOperadorCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

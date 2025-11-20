@@ -1,0 +1,120 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body" style="background-color: #01C29325 !important;">
+                <div class="row">
+                  <div class="col-xl-3 col-sm-12">
+                    <label class="form-label">Fecha</label>
+                    <input type="date" id="id_turncond_fecha_actual" name="fecha_actual" class="form-control"
+                           value="{{ data_fecha_actual|date:'Y-m-d' }}" placeholder="Fecha actual">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-xl-3 col-sm-12 text-center">
+                    <label class="form-label">Consultar</label>
+                    <br>
+                    <div class="btn-group" role="group" aria-label="Filtros">
+                      <button type="button" id="btnFiltarResumenServiciosDiaesList"
+                              class="btn btn-cyan">Buscar
+                      </button>
+                      <button type="button" id="btnLimpiarFiltroResumenServiciosDiaList"
+                              class="btn border border-cyan btn-light">Limpiar
+                      </button>
+                      <a href="{% url 'core_app_reportes:print_reportes_operadores' %}" target="_blank"
+                         class="btn btn-sm border border-success btn-success p-2"> <i class="fas fa-table"></i> Exportar
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body pt-1" style="background-color: #03BFCA25 !important;">
+                <h4>Servicios atendidos por dia</h4>
+                <div class="tab-content table-responsive table-sm">
+                  <table class="table table-sm table-striped w-100 color-table info-table"
+                         id="lista-servicios-resumen">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>#</th>
+                      <th>Fecha</th>
+                      <th title="Llamadas atendidas">Llamadas</th>
+                      <th title="Servicios registrados">Registradas</th>
+                      <th title="Servicios realizados">Realizados</th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body pt-1" style="background-color: #01c29325 !important;">
+                <h4>Servicios atendidos por operador</h4>
+                <div class="tab-content table-responsive table-sm">
+                  <table class="table table-sm table-striped w-100 color-table success-table"
+                         id="lista-turnos-operador">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>#</th>
+                      <th>Operador</th>
+                      <th>Fecha</th>
+                      <th>Turno</th>
+                      <th title="A: Asignados / C: Cancelado / R: Realizado">Servicios por Operador</th>
+                      <th>Estado</th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {#        <div class="row">#}
+        {#          <div class="col-12" id="detalle-lista-servicios-operador">#}
+        {#            <fieldset class="form-group form-group-sm border border-info p-2 mb-0 mt-2"#}
+        {#                      style="background-color: #03a9f315 !important;">#}
+        {#              <legend class="w-auto badge badge-info"#}
+        {#                      id="detalle-lista-servicios-operador-leyenda">Itinerario del conductor#}
+        {#              </legend>#}
+        {#              <input type="hidden" id="id_show_turno_dataid" name="show_turno_dataid">#}
+        {#              <div class="position-relative mb-1">#}
+        {#                <div class="tab-content table-responsive">#}
+        {#                  <table data-toggle="table" data-height="250" data-mobile-responsive="true"#}
+        {#                         class="table table-sm table-striped w-100" id="lista-detalle-servicios-conductor">#}
+        {#                    <thead class="table-info">#}
+        {#                    <tr>#}
+        {#                      <th></th>#}
+        {#                      <th>#</th>#}
+        {#                      <th>Cliente</th>#}
+        {#                      <th>hora [inicio-Fin]</th>#}
+        {#                      <th>Ruta</th>#}
+        {#                      <th>Estado</th>#}
+        {#                    </tr>#}
+        {#                    </thead>#}
+        {#                  </table>#}
+        {#                </div>#}
+        {#              </div>#}
+        {#            </fieldset>#}
+        {#          </div>#}
+        {#        </div>#}
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+<div class="modal" id="bs-nuevo-conductor-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xxl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Crear nuevo conductor</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_mantener_conductor">
+          <input type="hidden" id="id_codigo_conductor" name="codigo_conductor">
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border border-cyan p-2 mb-1"
+                        style="background-color: #03BFCA25 !important;">
+                <legend class="w-auto badge badge-cyan">CONDUCTOR</legend>
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Nombres</label>
+                  <div class="col-4">
+                    <input type="text" id="id_conductor_nombres" name="nombres" class="form-control"
+                           placeholder="Nombres" maxlength="100">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-1 col-form-label">Apellidos</label>
+                  <div class="col-3">
+                    <input type="text" id="id_conductor_apellido_paterno" name="apellido_paterno" class="form-control"
+                           placeholder="Paterno" maxlength="50">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-3">
+                    <input type="text" id="id_conductor_apellido_materno" name="apellido_materno" class="form-control"
+                           placeholder="Materno" maxlength="50">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Teléfono</label>
+                  <div class="col-4">
+                    <input type="text" id="id_conductor_telefono" name="telefono" class="form-control"
+                           placeholder="Teléfono" maxlength="100">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+
+                  <label class="col-1 col-form-label">Dirección</label>
+                  <div class="col-6">
+                    <input type="text" id="id_conductor_direccion" name="direccion" class="form-control"
+                           placeholder="Dirección" maxlength="100">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-group form-group-sm border border-cyan p-2 mb-1"
+                        style="background-color: #03BFCA25 !important;">
+                <legend class="w-auto badge badge-cyan">LICENCIA</legend>
+                <div class="row mb-1">
+                  <label class="col-1 col-form-label">Nro Licencia</label>
+                  <div class="col-2">
+                    <input type="text" id="id_conductor_licencia" name="licencia" class="form-control"
+                           placeholder="Nro licencia" maxlength="15">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-1 col-form-label d-none">Clase</label>
+                  <div class="col-2 d-none">
+                    <input type="text" id="id_conductor_clase" name="clase" class="form-control"
+                           placeholder="Clase" maxlength="1">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <label class="col-2 col-form-label d-none">Fecha vencimiento</label>
+                  <div class="col-4 d-none">
+                    <input type="date" id="id_conductor_fecha_vencimiento" name="fecha_vencimiento" class="form-control"
+                           placeholder="Fecha vencimiento" maxlength="1">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+                <div class="row mb-1 d-none">
+                  <label class="col-2 col-form-label">Estado (EE.UU.) otorga</label>
+                  <div class="col-10">
+                    <input type="text" id="id_conductor_estado_eeuu" name="estado_eeuu" class="form-control"
+                           placeholder="Estado de EE.UU" maxlength="50">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left" id="btnMantenerConductorGuardar">Guardar
+        </button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnMantenerConductorCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

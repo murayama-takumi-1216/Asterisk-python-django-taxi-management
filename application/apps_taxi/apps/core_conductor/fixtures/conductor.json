@@ -1,0 +1,850 @@
+[
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000001",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Marcos ",
+    "apellido_paterno": "Rordriguez",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000002",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Bienvenido",
+    "apellido_paterno": "Matos",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000003",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Youn",
+    "apellido_paterno": "Allen",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000004",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Mahmud",
+    "apellido_paterno": "Nadea",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000005",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Nelson",
+    "apellido_paterno": "Jorge",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000006",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Nando",
+    "apellido_paterno": "Torres",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000007",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jonathan",
+    "apellido_paterno": "Mesias",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000008",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jose",
+    "apellido_paterno": "Nina",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000009",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Syed",
+    "apellido_paterno": "Florez",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000010",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Dan",
+    "apellido_paterno": "Brankly",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000011",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Henry",
+    "apellido_paterno": "Encarnacion",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000012",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jose",
+    "apellido_paterno": "Gonzales",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000013",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Tomas",
+    "apellido_paterno": "Batista",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000014",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Faustino",
+    "apellido_paterno": "Morales",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000015",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Edgardo",
+    "apellido_paterno": "Salcedo",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000016",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Oscar",
+    "apellido_paterno": "Vega",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000017",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Mozammall",
+    "apellido_paterno": "Chowdhry",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000018",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Hipolito",
+    "apellido_paterno": "Reyez",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000019",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jose",
+    "apellido_paterno": "Pimentel",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000020",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Andy",
+    "apellido_paterno": "Reyes",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000021",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Gilberto",
+    "apellido_paterno": "Rojas",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000022",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Juan",
+    "apellido_paterno": "Peña",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000023",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Juan",
+    "apellido_paterno": "Romano",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000024",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Julio",
+    "apellido_paterno": "Batista",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000025",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Juan",
+    "apellido_paterno": "Diaz",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000026",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Marcelo",
+    "apellido_paterno": "Mejia",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000027",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Orlando",
+    "apellido_paterno": "Guevara",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000028",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Gustavo",
+    "apellido_paterno": "Acosta",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000029",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Herbe",
+    "apellido_paterno": "Saenz",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000030",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jerson",
+    "apellido_paterno": "Arias",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000031",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Khaifeh",
+    "apellido_paterno": "Hissham",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000032",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jose",
+    "apellido_paterno": "Sarmiento",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000033",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Elvis",
+    "apellido_paterno": "Santana",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000034",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Sandro",
+    "apellido_paterno": "Soca",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000035",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jose",
+    "apellido_paterno": "Peralta",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000036",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Paulina",
+    "apellido_paterno": "Goriz",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000037",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Pedro",
+    "apellido_paterno": "Cortez",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000038",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Federico",
+    "apellido_paterno": "Beltre",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000039",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Ali",
+    "apellido_paterno": "Ashraf",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000040",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jony",
+    "apellido_paterno": "Vargas",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000041",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Nicolas",
+    "apellido_paterno": "Hiciano",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000042",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jonel",
+    "apellido_paterno": "Sierra",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000043",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Clanenco",
+    "apellido_paterno": "Chambers",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000044",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Gregorio",
+    "apellido_paterno": "Santos",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000045",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Freylin",
+    "apellido_paterno": "Almonte",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000046",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Modesto",
+    "apellido_paterno": "Guitierrez",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000047",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Keith",
+    "apellido_paterno": "Cannon",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000048",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Bobby",
+    "apellido_paterno": "Rawl",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000049",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Miguel Antonino",
+    "apellido_paterno": "Rojas",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000050",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Ricardo",
+    "apellido_paterno": "Carhuallo",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000051",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Victor",
+    "apellido_paterno": "Acosta",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000052",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Feliz",
+    "apellido_paterno": "Sierra",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+},
+{
+  "model": "core_conductor.conductor",
+  "pk": "DRI000053",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:24:45.608Z",
+    "modified": "2024-09-21T23:24:45.608Z",
+    "nombre": "Jose",
+    "apellido_paterno": "Castillo",
+    "apellido_materno": "-",
+    "estado": "04",
+    "alquileres_realizados": 0,
+    "alquileres_cancelados": 0
+  }
+}
+]

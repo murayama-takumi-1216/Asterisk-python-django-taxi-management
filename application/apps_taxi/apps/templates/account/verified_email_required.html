@@ -1,0 +1,73 @@
+{% extends "layouts/login.html" %}
+{% load static i18n %}
+
+
+{% block body_page_wrapper_content %}
+  <div class="row justify-content-center">
+    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <div style="background-image:url({% static 'assets/images/background/login-register.jpg' %});">
+            <div class="card border-0 m-0">
+              <div class="card-body">
+                <div class="text-center">
+                  <h3 class="m-b-20">{% trans "Email Verification Required" %}</h3>
+
+                  <div class="alert alert-warning">
+                    <i class="fa fa-exclamation-circle fa-3x m-b-10"></i>
+                    <p class="m-b-20">
+                      {% blocktrans %}This account is not active. Please verify your email address before logging in.{% endblocktrans %}
+                    </p>
+                  </div>
+
+                  <p class="text-muted m-b-20">
+                    {% trans "We sent you an email with a verification link. Please check your inbox and spam folder." %}
+                  </p>
+
+                  <div class="m-t-20">
+                    <a href="{% url 'account_email' %}" class="btn btn-info m-r-10">
+                      <i class="fa fa-envelope"></i> {% trans "Resend Verification Email" %}
+                    </a>
+                    <a href="{% url 'core_app:login' %}" class="btn btn-secondary">
+                      <i class="fa fa-arrow-left"></i> {% trans "Back to Login" %}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body_page_wrapper_content %}
+
+
+{% block css %}
+  <link href="{% static 'assets/app_dist/css/pages/login-register-lock.css' %}" rel="stylesheet">
+  <style>
+    .alert-warning {
+      background-color: #fff3cd;
+      border-color: #ffeeba;
+      color: #856404;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .alert-warning i {
+      color: #ffc107;
+    }
+    .m-r-10 {
+      margin-right: 10px;
+    }
+  </style>
+{% endblock css %}
+
+
+{% block inline_javascript %}
+  <script type="text/javascript">
+    $(function () {
+      $(".preloader").fadeOut();
+    });
+  </script>
+{% endblock inline_javascript %}

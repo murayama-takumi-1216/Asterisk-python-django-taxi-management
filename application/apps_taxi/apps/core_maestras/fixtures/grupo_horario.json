@@ -1,0 +1,16 @@
+[
+{
+  "model": "core_maestras.grupohorario",
+  "pk": "GH001",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:47:17.800Z",
+    "modified": "2024-10-06T17:56:33.305Z",
+    "nombre": "Horario por defecto",
+    "descripcion": "Horario por defecto",
+    "estado": true,
+    "confirmado": true
+  }
+}
+]

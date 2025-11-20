@@ -1,0 +1,117 @@
+{% extends "layouts/login.html" %}
+{% load static i18n %}
+
+{% block body_page_wrapper_content %}
+  <div class="row justify-content-center">
+    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="login-register"
+               style="background-image:url({% static 'assets/images/background/login-register.jpg' %});">
+            <div class="card border-0 m-0">
+              <div class="card-body">
+                <form class="form-horizontal form-material" id="frmLoginUserFront">
+                  {% csrf_token %}
+                  <h3 class="text-center m-b-20">Login</h3>
+                  <div class="form-group ">
+                    <div class="col-xs-12">
+                      <input class="form-control" type="text" name="user_name" id="id_user_name"
+                             required="" placeholder="Username"></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-12">
+                      <input class="form-control" type="password" name="user_password" id="id_user_password"
+                             required="" placeholder="Password"></div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-md-12">
+                      <div class="d-flex no-block align-items-center">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label" for="customCheck1">Remember me</label>
+                        </div>
+                        <div class="ml-auto">
+                          <a href="javascript:void(0)" id="to-recover" class="text-muted"><i
+                            class="fas fa-lock m-r-5"></i> Forgot pwd?</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group text-center">
+                    <div class="col-xs-12 p-b-20">
+                      <button class="btn btn-md btn-info" id="btnAccederLogin" type="button">Acceder</button>
+                    </div>
+                  </div>
+                  <div class="form-group m-b-0">
+                    <div class="col-sm-12 text-center">
+                      Don't have an account? <a href="pages-register.html" class="text-info m-l-5"><b>Sign Up</b></a>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="form-horizontal" id="recoverform" action="index.html">
+                  <div class="form-group ">
+                    <div class="col-xs-12">
+                      <h3>Recover Password</h3>
+                      <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <div class="col-xs-12">
+                      <input class="form-control" type="text" required="" placeholder="Email"></div>
+                  </div>
+                  <div class="form-group text-center m-t-20">
+                    <div class="col-xs-12">
+                      <div class="form-actions">
+                        <div class="card-body">
+                          <button type="submit" class="btn btn-primary text-uppercase waves-effect waves-light"><i
+                            class="fa fa-check"></i> Reset
+                          </button>
+                          <button type="button" id="to-login" class="btn btn-dark">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body_page_wrapper_content %}
+
+
+{% block css %}
+  <link href="{% static 'assets/app_dist/css/pages/login-register-lock.css" rel="stylesheet' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/datatable-ext/css/base.css' %}">
+{% endblock css %}
+
+{% block base_javascript %}
+
+{% endblock base_javascript %}
+
+{% block inline_javascript %}
+  <script type="text/javascript">
+    $(function () {
+      $(".preloader").fadeOut();
+
+      $("#recoverform").slideUp();
+    });
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('#to-recover').on("click", function () {
+      $("#loginform").slideUp();
+      $("#recoverform").fadeIn();
+    });
+    $('#to-login').on("click", function () {
+      $("#loginform").fadeIn();
+      $("#recoverform").slideUp();
+    });
+  </script>
+
+  <script src="{% static 'js/core_app/core_app.js' %}?{{ version_control_js }}"></script>
+{% endblock inline_javascript %}

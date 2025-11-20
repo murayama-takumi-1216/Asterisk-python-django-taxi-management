@@ -1,0 +1,39 @@
+<div class="modal" id="bs-generar-programacion-operadores-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Generar horario de operadores</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_programacion_operadores">
+          <div class="row">
+            <div class="col-12">
+              <div class="row pt-2 pb-2"  style="background-color: #03BFCA25 !important;">
+                <label class="col-3 col-form-label">Fecha: </label>
+                <div class="col-9">
+                  <input type="date" id="id_program_ope_fecha" name="fecha" class="form-control" placeholder="Fecha">
+                  <small class="valid-feedback"> Error en este campo. </small>
+                </div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-12">
+                  <p class="text-black-50"><b>* </b>La programación será para toda la semana de la fecha seleccionada</p>
+                  <p class="text-black-50"><b>Obs: </b>Se considera primer dia de la semana el dia Lunes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left" id="btnProgramacionOperadoresGenerar">Generar
+        </button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnProgramacionOperadoresCancelar">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,338 @@
+[
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 1,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:50:02.134Z",
+    "modified": "2024-10-06T17:50:02.134Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 1,
+    "horario": "01",
+    "orden_view": 1,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 2,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:50:18.803Z",
+    "modified": "2024-10-06T17:50:18.803Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 1,
+    "horario": "02",
+    "orden_view": 2,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 3,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:50:31.360Z",
+    "modified": "2024-10-06T17:50:31.360Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 1,
+    "horario": "03",
+    "orden_view": 3,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 4,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:50:45.423Z",
+    "modified": "2024-10-06T17:50:45.423Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 2,
+    "horario": "01",
+    "orden_view": 4,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 5,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:50:57.994Z",
+    "modified": "2024-10-06T17:50:57.994Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 2,
+    "horario": "02",
+    "orden_view": 5,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 6,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:51:13.854Z",
+    "modified": "2024-10-06T17:51:13.854Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 2,
+    "horario": "03",
+    "orden_view": 6,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 7,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:51:25.822Z",
+    "modified": "2024-10-06T17:51:25.822Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 3,
+    "horario": "01",
+    "orden_view": 7,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 8,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:52:58.677Z",
+    "modified": "2024-10-06T17:52:58.677Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 3,
+    "horario": "02",
+    "orden_view": 8,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 9,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:53:09.669Z",
+    "modified": "2024-10-06T17:53:09.669Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 3,
+    "horario": "03",
+    "orden_view": 9,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 10,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:53:20.967Z",
+    "modified": "2024-10-06T17:53:20.967Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 4,
+    "horario": "01",
+    "orden_view": 10,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 11,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:53:33.600Z",
+    "modified": "2024-10-06T17:53:33.600Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 4,
+    "horario": "02",
+    "orden_view": 11,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 12,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:53:44.045Z",
+    "modified": "2024-10-06T17:53:44.045Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 4,
+    "horario": "03",
+    "orden_view": 12,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 13,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:53:55.303Z",
+    "modified": "2024-10-06T17:53:55.303Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 5,
+    "horario": "01",
+    "orden_view": 13,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 14,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:54:06.338Z",
+    "modified": "2024-10-06T17:54:06.338Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 5,
+    "horario": "02",
+    "orden_view": 14,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 15,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:54:18.432Z",
+    "modified": "2024-10-06T17:54:18.432Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 5,
+    "horario": "03",
+    "orden_view": 15,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 16,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:54:50.163Z",
+    "modified": "2024-10-06T17:54:50.163Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 6,
+    "horario": "01",
+    "orden_view": 16,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 17,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:55:16.091Z",
+    "modified": "2024-10-06T17:55:16.091Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 6,
+    "horario": "02",
+    "orden_view": 17,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 18,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:55:26.827Z",
+    "modified": "2024-10-06T17:55:26.827Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 6,
+    "horario": "03",
+    "orden_view": 18,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 19,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:55:36.557Z",
+    "modified": "2024-10-06T17:55:36.557Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 7,
+    "horario": "01",
+    "orden_view": 19,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 20,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:56:00.336Z",
+    "modified": "2024-10-06T17:56:00.336Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 7,
+    "horario": "02",
+    "orden_view": 20,
+    "estado": true,
+    "confirmado": true
+  }
+},
+{
+  "model": "core_maestras.grupohorariodetalle",
+  "pk": 21,
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-10-06T17:56:10.041Z",
+    "modified": "2024-10-06T17:56:15.001Z",
+    "grupo_horario": "GH001",
+    "dia_semana": 7,
+    "horario": "03",
+    "orden_view": 21,
+    "estado": true,
+    "confirmado": true
+  }
+}
+]

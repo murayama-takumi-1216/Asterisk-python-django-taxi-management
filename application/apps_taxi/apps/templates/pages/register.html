@@ -1,0 +1,159 @@
+{% extends "layouts/login.html" %}
+{% load static i18n %}
+
+
+{% block body_page_wrapper_content %}
+  <div class="row justify-content-center">
+    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <div style="background-image:url({% static 'assets/images/background/login-register.jpg' %});">
+            <div class="card border-0 m-0">
+              <div class="card-body">
+                <form class="form-horizontal form-material" id="frmRegisterUserFront" method="post" action="{% url 'core_app:register' %}">
+                  {% csrf_token %}
+                  <h3 class="text-center m-b-20">Sign Up</h3>
+                  
+                  {% if form %}
+                    {% if form.non_field_errors %}
+                      <div class="alert alert-danger">
+                        {% for error in form.non_field_errors %}
+                          <p class="mb-0">{{ error }}</p>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                    
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        {{ form.username }}
+                        {% if form.username.errors %}
+                          <div class="text-danger small">{{ form.username.errors }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                          <div class="text-danger small">{{ form.email.errors }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        {{ form.password1 }}
+                        {% if form.password1.errors %}
+                          <div class="text-danger small">{{ form.password1.errors }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        {{ form.password2 }}
+                        {% if form.password2.errors %}
+                          <div class="text-danger small">{{ form.password2.errors }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% else %}
+                    <!-- Fallback if form is not available -->
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <input class="form-control" type="text" name="username" id="id_username"
+                               required="" placeholder="Username">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <input class="form-control" type="email" name="email" id="id_email"
+                               required="" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <input class="form-control" type="password" name="password1" id="id_password1"
+                               required="" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-12">
+                        <input class="form-control" type="password" name="password2" id="id_password2"
+                               required="" placeholder="Confirm Password">
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="form-group text-center">
+                    <div class="col-xs-12 p-b-20">
+                      <button class="btn btn-md btn-info" id="btnRegisterUser" type="submit">Sign Up</button>
+                    </div>
+                  </div>
+                  <div class="form-group m-b-0">
+                    <div class="col-sm-12 text-center">
+                      Already have an account? <a href="{% url 'core_app:login' %}" class="text-info m-l-5"><b>Sign In</b></a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body_page_wrapper_content %}
+
+
+{% block css %}
+  <link href="{% static 'assets/app_dist/css/pages/login-register-lock.css' %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/datatable-ext/css/base.css' %}">
+  <style>
+    /* Style django-allauth form fields to match the design */
+    #frmRegisterUserFront input[type="text"],
+    #frmRegisterUserFront input[type="email"],
+    #frmRegisterUserFront input[type="password"] {
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    #frmRegisterUserFront input[type="text"]:focus,
+    #frmRegisterUserFront input[type="email"]:focus,
+    #frmRegisterUserFront input[type="password"]:focus {
+      border-color: #17a2b8;
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+    }
+    
+    .text-danger.small {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+    
+    .alert-danger {
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      border-radius: 4px;
+    }
+  </style>
+{% endblock css %}
+
+{% block base_javascript %}
+
+{% endblock base_javascript %}
+
+{% block inline_javascript %}
+  <script type="text/javascript">
+    $(function () {
+      $(".preloader").fadeOut();
+    });
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  </script>
+
+  <script src="{% static 'js/core_app/core_app.js' %}?{{ version_control_js }}"></script>
+{% endblock inline_javascript %}
+

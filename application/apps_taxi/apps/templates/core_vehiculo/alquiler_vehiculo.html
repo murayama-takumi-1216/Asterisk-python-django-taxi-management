@@ -1,0 +1,76 @@
+{% extends "layouts/intranet.html" %}
+
+{% load static i18n %}
+
+{% block page_wrapper_title %}
+  <div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+      <h4 class="text-themecolor">Alquiler de vehículos</h4>
+    </div>
+    <div class="col-md-7 align-self-center text-right">
+      <div class="d-flex justify-content-end align-items-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Programaciones</a></li>
+          <li class="breadcrumb-item active">Alquiler Vehiculo</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+{% endblock page_wrapper_title %}
+
+{% block page_wrapper_content %}
+  {% include 'core_vehiculo/basepartials/_alquiler_wrapper_content.html' %}
+{% endblock page_wrapper_content %}
+
+{% block modal %}
+  {% include 'core_vehiculo/modals/_modal_conductores.html' %}
+{% endblock modal %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/datatables.net-bs4/css/responsive.dataTables.min.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/datatable-ext/css/base.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css' %}">
+{% endblock css %}
+
+
+{% block base_javascript %}
+  <script src="{% static 'assets/modules/moment/moment.js' %}"></script>
+  <script src="{% static 'assets/modules/moment/locale/es-us.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net-bs4/js/dataTables.responsive.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js' %}"></script>
+{% endblock base_javascript %}
+
+{% block inline_javascript %}
+  <script>
+    const urlList = {
+      dashboardPage: "{% url 'common:load_page' %}",
+      access: {
+        logIn: "{% url 'core_app:core_app_api:login' %}",
+        logOut: "{% url 'core_app:core_app_api:logout' %}",
+      },
+      conductor: {
+        listaConductores: "{% url 'core_conductor:core_conductor_api:lista_conductor_alquiler-list' %}",
+      },
+      vehiculo: {
+        listaVehiculo: "{% url 'core_vehiculo:core_vehiculo_api:lista_vehiculo_alquilar-list' %}",
+        alquilerVehiculoList: "{% url 'core_vehiculo:core_vehiculo_api:mantener_alquiler_vehiculo-list' %}",
+        alquilerVehiculoDetail: "{% url 'core_vehiculo:core_vehiculo_api:mantener_alquiler_vehiculo-detail' '0000' %}",
+      },
+      dataTablesES: "{% static 'assets/datatable-ext/language/spanish.json' %}",
+    };
+
+  </script>
+  <script src="{% static 'js/core_vehiculo/alquilar_vehiculo.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_vehiculo/conductores_modal.js' %}?{{ version_control_js }}"></script>
+{% endblock inline_javascript %}

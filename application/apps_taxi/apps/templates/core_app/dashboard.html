@@ -1,0 +1,51 @@
+{% extends "layouts/intranet.html" %}
+
+{% load static i18n %}
+
+{% block page_wrapper_title %}
+  <div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+      <h4 class="text-themecolor">Atención al cliente</h4>
+    </div>
+    <div class="col-md-7 align-self-center text-right">
+      <div class="d-flex justify-content-end align-items-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+          <li class="breadcrumb-item active">Atenciones al cliente</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+{% endblock page_wrapper_title %}
+
+{% block page_wrapper_content %}
+  {% include 'core_app/basepartials/_dashboard_wrapper_content.html' %}
+{% endblock page_wrapper_content %}
+
+{% block css %}
+  <link href="{% static 'assets/modules/morrisjs/morris.css' %}" rel="stylesheet">
+{% endblock css %}
+
+
+
+{% block base_javascript %}
+  <script src="{% static 'assets/modules/raphael/raphael-min.js' %}"></script>
+  <script src="{% static 'assets/modules/morrisjs/morris.js' %}"></script>
+  <script src="{% static 'assets/modules/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+{% endblock base_javascript %}
+
+{% block inline_javascript %}
+
+  <script>
+    const urlList = {
+      dashboardPage: "{% url 'core_app:process' %}",
+      access: {
+        logIn: "{% url 'core_app:core_app_api:login' %}",
+        logOut: "{% url 'core_app:core_app_api:logout' %}",
+      },
+      dataTablesES: "{% static 'assets/datatable-ext/language/spanish.json' %}",
+    };
+  </script>
+
+  <script src="{% static 'js/core_app/core_app_dashboard.js' %}?{{ version_control_js }}"></script>
+{% endblock inline_javascript %}

@@ -1,0 +1,183 @@
+<div class="d-none" id="dataJsonSpark">{{ data_operadores }}</div>
+
+<!-- Period Header -->
+<div class="row">
+  <div class="col-12">
+    <div class="card bg-gradient-info text-white shadow">
+      <div class="card-body py-4">
+        <div class="d-flex align-items-center">
+          <div class="mr-3">
+            <i class="fa fa-calendar fa-3x opacity-7"></i>
+          </div>
+          <div>
+            <h3 class="card-title text-white mb-1">
+              Dashboard Period
+            </h3>
+            <h5 class="mb-0 font-weight-light">{{ data_fecha_inicio|date:"M d, Y" }} - {{ data_fecha_fin|date:"M d, Y" }}</h5>
+            <p class="mb-0 mt-1 opacity-8"><small>7-day operator performance overview</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Calls Answered Section -->
+<div class="row">
+  <div class="col-12">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="card-title mb-0">
+            <i class="fa fa-phone text-success"></i> <strong>Calls Answered</strong>
+          </h4>
+          <span class="badge badge-light badge-lg">
+            <i class="fa fa-calendar-o"></i> {{ data_fecha_inicio|date:"M d" }} - {{ data_fecha_fin|date:"M d" }}
+          </span>
+        </div>
+        <hr class="mt-2 mb-4">
+        <div class="row" id="viewJsonSparkGraficarLlamadas">
+          <div class="col-12 text-center py-5">
+            <div class="spinner-border text-info" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p class="text-muted mt-3">Loading operator data...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services Registered Section -->
+<div class="row">
+  <div class="col-12">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="card-title mb-0">
+            <i class="fa fa-clipboard text-info"></i> <strong>Recorded Services</strong>
+          </h4>
+          <span class="badge badge-light badge-lg">
+            <i class="fa fa-calendar-o"></i> {{ data_fecha_inicio|date:"M d" }} - {{ data_fecha_fin|date:"M d" }}
+          </span>
+        </div>
+        <hr class="mt-2 mb-4">
+        <div class="row" id="viewJsonSparkGraficarRegistrados">
+          <div class="col-12 text-center py-5">
+            <div class="spinner-border text-info" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p class="text-muted mt-3">Loading operator data...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services Assigned Section -->
+<div class="row">
+  <div class="col-12">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="card-title mb-0">
+            <i class="fa fa-car text-warning"></i> <strong>Assigned Care</strong> <small class="text-muted">(Taxi Dispatch)</small>
+          </h4>
+          <span class="badge badge-light badge-lg">
+            <i class="fa fa-calendar-o"></i> {{ data_fecha_inicio|date:"M d" }} - {{ data_fecha_fin|date:"M d" }}
+          </span>
+        </div>
+        <hr class="mt-2 mb-4">
+        <div class="row" id="viewJsonSparkGraficarAsignados">
+          <div class="col-12 text-center py-5">
+            <div class="spinner-border text-info" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p class="text-muted mt-3">Loading operator data...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Dashboard styling */
+  .bg-gradient-info {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  }
+  .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+  .shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  }
+  .opacity-7 {
+    opacity: 0.7;
+  }
+  .opacity-8 {
+    opacity: 0.8;
+  }
+  .badge-lg {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  .card {
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .card-title strong {
+    font-weight: 600;
+  }
+
+  /* Operator card styling - enhanced */
+  #viewJsonSparkGraficarLlamadas .col-lg-3 > div,
+  #viewJsonSparkGraficarRegistrados .col-lg-3 > div,
+  #viewJsonSparkGraficarAsignados .col-lg-3 > div {
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem !important;
+    margin: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+
+  #viewJsonSparkGraficarLlamadas .col-lg-3 > div:hover,
+  #viewJsonSparkGraficarRegistrados .col-lg-3 > div:hover,
+  #viewJsonSparkGraficarAsignados .col-lg-3 > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  #viewJsonSparkGraficarLlamadas h2,
+  #viewJsonSparkGraficarRegistrados h2,
+  #viewJsonSparkGraficarAsignados h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+
+  #viewJsonSparkGraficarLlamadas small,
+  #viewJsonSparkGraficarRegistrados small,
+  #viewJsonSparkGraficarAsignados small {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+  }
+
+  /* Sparkline container styling */
+  #viewJsonSparkGraficarLlamadas .col-lg-3 > div > div:last-child,
+  #viewJsonSparkGraficarRegistrados .col-lg-3 > div > div:last-child,
+  #viewJsonSparkGraficarAsignados .col-lg-3 > div > div:last-child {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #6c757d;
+    font-weight: 500;
+  }
+</style>

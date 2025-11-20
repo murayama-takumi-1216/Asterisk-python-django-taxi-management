@@ -1,0 +1,68 @@
+{% load static i18n %}
+<nav class="sidebar-nav">
+  <ul id="sidebarnav">
+    <li class="user-pro">
+      <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><img
+        src="{% static 'assets/images/users/1.jpg' %}" alt="user-img" class="img-circle"><span
+        class="hide-menu">{{ user.username|truncatechars:15 }}</span></a>
+      <ul aria-expanded="false" class="collapse">
+        <li><a href="{% url 'account_email' %}"><i class="ti-settings"></i> Account Setting</a></li>
+        <li><a class="btnAccessLogOut" href="javascript:void(0)"><i
+          class="fa fa-power-off"></i> {% translate "Sign Out" %}</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<nav class="sidebar-nav">
+  <ul id="sidebarnav">
+    {% if user.has_permiso_administrador %}
+      <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+        class="icon-speedometer"></i><span class="hide-menu">Dashboard</span></a>
+        <ul aria-expanded="false" class="collapse">
+          <li><a href="{% url 'core_app:dashboard' %}">Dashboard </a></li>
+        </ul>
+      </li>
+      <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+        class="icon-speedometer"></i><span class="hide-menu">Reportes</span></a>
+        <ul aria-expanded="false" class="collapse">
+          <li><a href="{% url 'core_app_reportes:reportes_celular' %}">Celular</a></li>
+          <li><a href="{% url 'core_app_reportes:reportes' %}">Básico</a></li>
+          <li><a href="{% url 'core_app_reportes:reportes_avanzado' %}">Completo</a></li>
+        </ul>
+      </li>
+      <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+        class="ti-layout-grid2"></i><span class="hide-menu">Mantenimiento</span></a>
+        <ul aria-expanded="false" class="collapse">
+          <li><a href="{% url 'core_app_mantenimiento:mantenimiento_conductores' %}">Conductores</a></li>
+          <li><a href="{% url 'core_app_mantenimiento:mantenimiento_vehiculos' %}">Vehículos</a></li>
+          <li><a href="{% url 'core_app_mantenimiento:mantenimiento_operadores' %}">Operadores</a></li>
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if user.has_permiso_operador %}
+      <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+        class="ti-layout-grid2"></i><span class="hide-menu">Proceso <span
+        class="badge badge-pill badge-cyan ml-auto">2</span></span></a>
+        <ul aria-expanded="false" class="collapse">
+          <li><a href="{% url 'core_app:process' %}">Atenciones </a></li>
+          <li><a href="{% url 'core_app:operador_repo_turno' %}">Reporte de Turno </a></li>
+          <li><a href="{% url 'core_operador:operador_horario' %}" title="Turnos Operadores">Horario</a></li>
+        </ul>
+      </li>
+    {% endif %}
+
+    {% if user.has_permiso_administrador or user.has_permiso_admin_operador %}
+      <li><a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" title="Programaciones"
+             aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">Programaciones</span></a>
+        <ul aria-expanded="false" class="collapse">
+          <li><a href="{% url 'core_operador:operador_horario' %}" title="Turnos Operadores">Horario</a></li>
+          <li><a href="{% url 'core_turno:turno_operador' %}" title="Programción de Operadores">Programación</a></li>
+          <li><a href="{% url 'core_vehiculo:alquiler_vehiculo' %}">Alquilar vehículos</a></li>
+{#          <li><a href="{% url 'core_turno:turno_conductor' %}">Activar turno</a></li>#}
+        </ul>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

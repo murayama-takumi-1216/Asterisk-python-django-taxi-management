@@ -1,0 +1,74 @@
+[
+{
+  "model": "core_operador.operador",
+  "pk": "OPE000001",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:35:10.413Z",
+    "modified": "2024-09-27T17:47:14.445Z",
+    "nombre": "Brenda",
+    "apellido_paterno": "Miranda",
+    "apellido_materno": null,
+    "alias": "Brenda",
+    "extension": null,
+    "estado": true,
+    "user": 2,
+    "grupo_horario": "GH001"
+  }
+},
+{
+  "model": "core_operador.operador",
+  "pk": "OPE000002",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:35:10.413Z",
+    "modified": "2024-09-27T17:47:20.317Z",
+    "nombre": "José",
+    "apellido_paterno": "Ormeño",
+    "apellido_materno": null,
+    "alias": "Jose",
+    "extension": null,
+    "estado": true,
+    "user": 3,
+    "grupo_horario": "GH001"
+  }
+},
+{
+  "model": "core_operador.operador",
+  "pk": "OPE000003",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:35:10.413Z",
+    "modified": "2024-09-27T17:47:25.416Z",
+    "nombre": "Ricardo",
+    "apellido_paterno": "Huaman",
+    "apellido_materno": null,
+    "alias": "Gato",
+    "extension": null,
+    "estado": true,
+    "user": 4,
+    "grupo_horario": "GH001"
+  }
+},
+{
+  "model": "core_operador.operador",
+  "pk": "OPE000004",
+  "fields": {
+    "created_by": "admin",
+    "modified_by": "admin",
+    "created": "2024-09-21T23:35:10.413Z",
+    "modified": "2024-09-27T17:47:31.555Z",
+    "nombre": "Yudith",
+    "apellido_paterno": "Camilo",
+    "apellido_materno": null,
+    "alias": "Judi",
+    "extension": null,
+    "estado": true,
+    "user": 5,
+    "grupo_horario": "GH001"
+  }
+}
+]

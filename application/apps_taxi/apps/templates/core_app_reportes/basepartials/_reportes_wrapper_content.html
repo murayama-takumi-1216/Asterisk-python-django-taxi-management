@@ -1,0 +1,154 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body" style="min-height: 180px; overflow: auto;background-color: #FB967A25 !important;">
+                <h4 class="card-title">Cosultas por conductor <span
+                  class="small text-black-50">(datos de conductor)</span></h4>
+                <div class="row">
+                  <div class="col-4">
+                    <label class="form-label">Código del conductor</label>
+                    <input type="text" id="id_turncond_codigo_conductor" name="codigo_conductor" class="form-control"
+                           placeholder="Código del conductor">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-4">
+                    <label class="form-label">Nro del vehículo</label>
+                    <input type="text" id="id_turncond_nombre_vehiculo" name="nombre_vehiculo" class="form-control"
+                           placeholder="Nro del vehículo">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-4">
+                    <label class="form-label">Estado de turno</label>
+                    <select id="id_turncond_estado_turno" name="estado_turno" class="form-control"
+                            placeholder="Estado de turno">
+                      <option value="">Todos los estados</option>
+                      {% for estado in data_estados_turno %}
+                        <option value="{{ estado.codigo }}">{{ estado.nombre }}</option>
+                      {% endfor %}
+                    </select>
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-4">
+                    <label class="form-label">Apellido Paterno del conductor</label>
+                    <input type="text" id="id_turncond_ape_paterno_conductor" name="ape_paterno_conductor" class="form-control"
+                           placeholder="Apellido Paterno del conductor">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body" style="min-height: 180px; overflow: auto;background-color: #01C29325 !important;">
+                <h4 class="card-title">Consulta por datos del servicio <span class="small text-black-50">(datos de turno)</span>
+                </h4>
+                <div class="row">
+                  <div class="col-4">
+                    <label class="form-label">Fecha inicio</label>
+                    <input type="date" id="id_turncond_fecha_inicio" name="fecha_inicio" class="form-control"
+                           placeholder="Fecha inicio">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-4">
+                    <label class="form-label">Fecha fin</label>
+                    <input type="date" id="id_turncond_fecha_fin" name="fecha_fin" class="form-control"
+                           placeholder="Fecha fin">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-4">
+                    <label class="form-label">Turno</label>
+                    <select id="id_turncond_codigo_horario" name="codigo_horario" class="form-control"
+                            placeholder="Horario">
+                      <option value="">Todos los horarios</option>
+                      {% for horario in data_horario_base %}
+                        <option value="{{ horario.cod_horario }}">
+                          {{ horario.nom_horario }} [{{ horario.inicio_horario }} - {{ horario.fin_horario }}]
+                        </option>
+                      {% endfor %}
+                    </select>
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body" style="background-color: #03BFCA25 !important;">
+                <h4 class="card-title">Servicios realizados de los conductores
+                  <div class="btn-group" role="group" aria-label="Filtros">
+                    <button type="button" id="btnFiltarTurnoConductoresList"
+                            class="btn btn-sm btn-cyan">Buscar
+                    </button>
+                    <button type="button" id="btnLimpiarFiltroTurnoConductoresList"
+                            class="btn btn-sm border border-cyan btn-light">Limpiar
+                    </button>
+                  </div>
+                </h4>
+                <span class="small text-black-50">Agrupado por Fecha y Turnos (madrugada, Mañana y Tarde)</span>
+                <div class="tab-content table-responsive table-sm">
+                  <table class="table table-sm table-striped w-100 color-table info-table"
+                         id="lista-turnos-conductor">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>#</th>
+                      <th>Conductor</th>
+                      <th>Opciones</th>
+                      <th>Vehiculo</th>
+                      <th>Fecha</th>
+                      <th>Turno</th>
+                      <th title="A: Asignados / C: Cancelado / R: Realizado">Servicios (R C)</th>
+                      <th title="Monto referencial">Monto (ref.)</th>
+                      <th>Estado</th>
+                      <th>Observación</th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12" id="detalle-lista-servicios-conductor">
+            <fieldset class="form-group form-group-sm border border-info p-2 mb-0 mt-2"
+                      style="background-color: #03a9f315 !important;">
+              <legend class="w-auto badge badge-info"
+                      id="detalle-lista-servicios-conductor-leyenda">Itinerario del conductor
+              </legend>
+              <input type="hidden" id="id_show_turno_dataid" name="show_turno_dataid">
+              <div class="position-relative mb-1">
+                <div class="tab-content table-responsive">
+                  <table data-toggle="table" data-height="250" data-mobile-responsive="true"
+                         class="table table-sm table-striped w-100" id="lista-detalle-servicios-conductor">
+                    <thead class="table-info">
+                    <tr>
+                      <th></th>
+                      <th>#</th>
+                      <th>Cliente</th>
+                      <th>hora [inicio-Fin]</th>
+                      <th>Ruta</th>
+                      <th>Estado</th>
+                    </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

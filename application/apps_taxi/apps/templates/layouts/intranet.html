@@ -1,0 +1,62 @@
+{% extends "base_all.html" %}
+{% load static i18n %}
+
+{% block title %}Intranet{% endblock title %}
+
+{#{% block css %}#}
+{#{% endblock css %}#}
+
+{#{% block javascript %}#}
+{#{% endblock javascript %}#}
+
+{% block bodyclass %}fix-header fixed-layout card-no-border fix-sidebar skin-green{% endblock bodyclass %}
+
+{% block body %}
+  {% block body_topbar %}
+    <header class="topbar">
+      {% include 'basepartials/intranet_topbar.html' %}
+    </header>
+  {% endblock body_topbar %}
+
+  {% block body_left_sidebar %}
+    <aside class="left-sidebar d-print-none">
+      <div class="scroll-sidebar">
+        {% include 'basepartials/intranet_sidebar_left.html' %}
+      </div>
+    </aside>
+  {% endblock body_left_sidebar %}
+
+  {% block body_page_wrapper %}
+    <div class="page-wrapper">
+      <div class="container-fluid">
+        {% block page_wrapper_title %}
+          {% include 'basepartials/page_wrapper_right_sidebar.html' %}
+        {% endblock page_wrapper_title %}
+
+        {% block page_wrapper_content %}
+          {% include 'basepartials/page_wrapper_content.html' %}
+        {% endblock page_wrapper_content %}
+
+        {% block page_wrapper_right_sidebar %}
+          {% include 'basepartials/page_wrapper_right_sidebar.html' %}
+        {% endblock page_wrapper_right_sidebar %}
+
+      </div>
+    </div>
+  {% endblock body_page_wrapper %}
+
+  {% block body_footer %}
+    <footer class="footer">
+      {% include 'basepartials/footer.html' %}
+    </footer>
+  {% endblock body_footer %}
+{% endblock body %}
+
+
+{#{% block modal %}#}
+{#{% endblock modal %}#}
+
+
+{#{% block inline_javascript %}#}
+{##}
+{#{% endblock inline_javascript %}#}

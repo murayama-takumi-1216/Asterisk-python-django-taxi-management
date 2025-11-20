@@ -1,0 +1,68 @@
+<div class="modal" id="bs-selec-turno-vehiculo-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Agregar/Modificar Turno conductor</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_select_turno">
+          <input type="hidden" id="id_bs_select_turno_codigo" name="turno_codigo">
+          <input type="hidden" id="id_bs_select_vehiculo_codigo" name="vehiculo_codigo">
+          <input type="hidden" id="id_bs_select_horario_codigo" name="horario_codigo">
+          <input type="hidden" id="id_bs_select_conductor_codigo" name="cod_coductor">
+          <div class="row" id="idTurnoCheckOpcFinalizar">
+            <div class="col-12 mb-2">
+              <fieldset class="form-group form-group-sm border-cyan border p-2 mb-0"
+                        style="background-color: #03BFCA20 !important;">
+                <legend class="w-auto badge badge-cyan">FINALIZAR DE TURNO</legend>
+                <div class="row">
+                  <div class="col-6 text-right">
+                    <button type="button" class="btn btn-cyan" id="btnTurnoConductorFinalizar">Finalizar turno</button>
+                  </div>
+                  <div class="col-6 text-left pt-1 border-left border-cyan">
+                    <input type="checkbox" id="id_turno_finalizar" name="finalizar" class="check font-14">
+                    <label for="id_turno_finalizar" class="form-label">Finalizar</label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border-info border p-2 mb-0"
+                        style="background-color: #03a9f315 !important;">
+                <legend class="w-auto badge badge-info">TURNOS</legend>
+                <h4 class="detalle-operador">Seleccionar al turno</h4>
+                <div data-offset="0" class="position-relative mb-1">
+                  <div class="tab-content table-responsive">
+                    <table data-toggle="table" data-mobile-responsive="true"
+                           class="table table-sm table-striped w-100" id="lista-turno-escoger">
+                      <thead class="table-info">
+                      <tr>
+                        <th></th>
+                        <th>#</th>
+                        <th>Nombre turno</th>
+                        <th>[Inicio-Fin]</th>
+                        <th>Opc.</th>
+                      </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left" id="btnFrmTurnoConductorGuardar">Guardar
+        </button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnFrmTurnoConductorCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

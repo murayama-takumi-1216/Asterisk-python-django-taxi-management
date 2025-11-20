@@ -1,0 +1,46 @@
+{% load static i18n %}
+<nav class="navbar top-navbar navbar-expand-md navbar-dark">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="{% url 'core_app:initial_page' %}">
+      <b>
+        <img src="{% static 'assets/images/logo-taxi-icon.png' %}" alt="homepage" class="dark-logo"/>
+        <img src="{% static 'assets/images/logo-taxi-light-icon.png' %}" alt="homepage" class="light-logo"/>
+      </b>
+      <span>
+        <img src="{% static 'assets/images/logo-taxi-text.png' %}" alt="homepage" class="dark-logo"/>
+        <img src="{% static 'assets/images/logo-taxi-light-text.png' %}" class="light-logo" alt="homepage"/>
+      </span>
+    </a>
+  </div>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark"
+                              href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+      <li class="nav-item"><a
+        class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark"
+        href="javascript:void(0)"><i class="icon-menu"></i></a></li>
+
+      <li class="nav-item v-middle">
+        <h4 class="text-light d-none d-md-block d-lg-block v-middle mt-4">TAXI PATERSON LLC</h4>
+      </li>
+    </ul>
+    <ul class="navbar-nav my-lg-0 mr-2">
+      <li class="nav-item dropdown u-pro">
+        <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false"><img
+          src="{% static 'assets/images/users/1.jpg' %}" alt="user" class=""> <span
+          class="hidden-md-down">{{ user.username|truncatechars:8 }}&nbsp;<i
+          class="fa fa-angle-down"></i></span> </a>
+        <div class="dropdown-menu dropdown-menu-right animated flipInY">
+          <a href="{% url 'account_email' %}" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+          <!-- text-->
+          <div class="dropdown-divider"></div>
+          <!-- text-->
+          <a href="javascript:void(0)" class="dropdown-item btnAccessLogOut"><i
+            class="fa fa-power-off"></i> {% translate "Sign Out" %}</a>
+          <!-- text-->
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

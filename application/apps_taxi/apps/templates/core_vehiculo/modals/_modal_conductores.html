@@ -1,0 +1,113 @@
+<div class="modal" id="bs-selec-condcutor-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Agregar/Modificar Conductores</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_select_alquiler">
+          <input type="hidden" id="id_bs_select_alquiler_codigo" name="alquiler_codigo">
+          <input type="hidden" id="id_bs_select_vehiculo_codigo" name="vehiculo_codigo">
+          <input type="hidden" id="id_bs_select_conductor_codigo" name="cod_coductor">
+          <div class="row">
+            <div class="col-12 mb-2">
+              <fieldset class="form-group form-group-sm border-cyan border p-2 mb-0"
+                        style="background-color: #03BFCA20 !important;">
+                <legend class="w-auto badge badge-cyan">INICIO DE ALQUILER</legend>
+                <div class="row">
+                  <div class="col-4">
+                    <label class="form-label">Fecha inicio</label>
+                    <input type="date" id="id_alquiler_fecha_inicio" name="fecha_inicio" class="form-control"
+                           placeholder="Fecha inicio">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-4">
+                    <label class="form-label">Hora inicio</label>
+                    <input type="time" id="id_alquiler_hora_inicio" name="hora_inicio" class="form-control"
+                           placeholder="Hora inicio">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+
+                  <div class="col-2 text-center border-left border-cyan" id="idAlquilerOpcInicioHoraActual">
+                    <br>
+                    <button type="button" class="btn btn-sm btn-cyan" id="btnAlquilerInicioHoraActual">
+                      <i class="fa fa-clock"></i> Hora actual
+                    </button>
+                  </div>
+
+                  <div class="col-2 border-left border-cyan">
+                    <label class="form-label">Entrega de radio</label>
+                    <input type="checkbox" id="id_alquiler_entrega_radio" name="entrega_radio" value="SI"
+                           class="form-control form-control-sm" placeholder="Entrega de radio">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-12 mb-2">
+              <fieldset class="form-group form-group-sm border-cyan border p-2 mb-0"
+                        style="background-color: #03BFCA20 !important;">
+                <legend class="w-auto badge badge-cyan">FINALIZACIÓN DE ALQUILERR</legend>
+                <div class="row">
+                  <div class="col-5">
+                    <label class="form-label">Fecha Fin</label>
+                    <input type="date" id="id_alquiler_fecha_fin" name="fecha_fin" class="form-control"
+                           placeholder="Fecha fin">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-5">
+                    <label for="id_alquiler_hora_fin" class="form-label">Hora Fin</label>
+                    <input type="time" id="id_alquiler_hora_fin" name="hora_fin" class="form-control"
+                           placeholder="Hora fin">
+                    <small class="valid-feedback"> Error en este campo. </small>
+                  </div>
+                  <div class="col-2 text-center border-left border-cyan" id="idAlquilerCheckOpcFinalizar">
+                    <button type="button" class="btn btn-sm btn-cyan" id="btnAlquilerFinalizar">Finalizar</button>
+                    <input type="checkbox" id="id_alquiler_finalizar" name="finalizar" class="check font-14">
+                    <label for="id_alquiler_finalizar" class="form-label">Finalizar</label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border-info border p-2 mb-0"
+                        style="background-color: #03a9f315 !important;">
+                <legend class="w-auto badge badge-info">CONDUCTORES</legend>
+                <h4 class="detalle-operador">Seleccionar al conductor</h4>
+                <div data-offset="0" class="position-relative mb-1">
+                  <div class="tab-content table-responsive">
+                    <table data-toggle="table" data-mobile-responsive="true"
+                           class="table table-sm table-striped w-100" id="lista-conductores-escoger">
+                      <thead class="table-info">
+                      <tr>
+                        <th></th>
+                        <th>#</th>
+                        <th>Conductor</th>
+                        <th>Alias</th>
+                        <th>Usuario APP</th>
+                        <th>Opc.</th>
+                      </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left" id="btnFrmAlquilerGuardar">Guardar
+        </button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnFrmAlquilerCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{% extends "base_all.html" %}
+{% load static i18n %}
+
+{% block title %}Intranet{% endblock title %}
+
+{% block bodyclass %}fix-header fixed-layout single-column card-no-border fix-sidebar skin-green{% endblock bodyclass %}
+
+{% block body %}
+  {% block body_topbar %}
+    <header class="topbar">
+      {% include 'basepartials/intranet_topbar_print.html' %}
+    </header>
+  {% endblock body_topbar %}
+
+  {% block body_left_sidebar %}
+  {% endblock body_left_sidebar %}
+
+  {% block body_page_wrapper %}
+    <div class="page-wrapper">
+      <div class="container-fluid">
+        {% block page_wrapper_title %}
+        {% endblock page_wrapper_title %}
+
+        {% block page_wrapper_content %}
+          <p>...</p>
+        {% endblock page_wrapper_content %}
+
+        {% block page_wrapper_right_sidebar %}
+        {% endblock page_wrapper_right_sidebar %}
+
+      </div>
+    </div>
+  {% endblock body_page_wrapper %}
+
+  {% block body_footer %}
+    <footer class="footer">
+      {% include 'basepartials/footer.html' %}
+    </footer>
+  {% endblock body_footer %}
+{% endblock body %}

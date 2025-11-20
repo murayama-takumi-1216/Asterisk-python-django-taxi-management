@@ -1,0 +1,121 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <ul class="nav nav-tabs customtab2" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home7" role="tab"><span class="hidden-sm-up"><i
+              class="ti-check-box"></i></span> <span class="hidden-xs-down">Horario</span></a></li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#profile7" role="tab"><span class="hidden-sm-up"><i
+              class="ti-pencil-alt"></i></span> <span class="hidden-xs-down">Modificar horario</span></a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane p-t-10 active" id="home7" role="tabpanel">
+            <h4 class="card-title">HORARIO DE LOS OPERADORES</h4>
+            <hr>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped color-bordered-table info-bordered-table">
+                <thead class="font-bold bd-highlight text-black-50 text-uppercase text-center">
+                <tr>
+                  <th>Horario</th>
+                  {% for dia in horario.dias_semana %}
+                    <th>{{ dia.nombre }}</th>
+                  {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for items_horario in horario.data_horario %}
+                  <tr>
+                    <td class="font-bold bd-highlight text-black-50 text-uppercase text-center">
+                      {{ items_horario.horario.inicio_horario }} - {{ items_horario.horario.fin_horario }}
+                    </td>
+                    {% for dia in items_horario.data %}
+                      <td class="{% if dia.turno_activo %}table-success{% endif %}">
+                        <ul class="list-style-none">
+                          {% for aux_horario_turno in dia.horario_turno_data %}
+                            <li>
+                              <span>{{ aux_horario_turno.operador.nombre }} {{ aux_horario_turno.operador.apellido_paterno }}</span>
+                              <span class="text-black-50">&laquo;{{ aux_horario_turno.operador.alias }}&raquo;</span>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tab-pane p-t-10" id="profile7" role="tabpanel">
+            <h4 class="card-title">MODIFICAR HORARIO DE LOS OPERADORES</h4>
+            <hr>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped color-bordered-table info-bordered-table">
+                <thead class="font-bold bd-highlight text-black-50 text-uppercase text-center">
+                <tr>
+                  <th>Horario</th>
+                  {% for dia in horario.dias_semana %}
+                    <th>{{ dia.nombre }}</th>
+                  {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for items_horario in horario.data_horario %}
+                  <tr>
+                    <td class="font-bold bd-highlight text-black-50 text-uppercase text-center">
+                      {{ items_horario.horario.inicio_horario }} - {{ items_horario.horario.fin_horario }}
+                    </td>
+                    {% for item_dia in items_horario.data %}
+                      <td>
+                        <ul class="list-style-none mb-1" style="list-style-type: square;">
+                          {% if item_dia.horario_turno_data %}
+                            {% for aux_horario_turno in item_dia.horario_turno_data %}
+                              <li class="p-1">
+                                <div class="btn-group btn-group-sm">
+                                  {% if aux_horario_turno.confirmado %}
+                                    <button type="button" class="btn btn-info disabled" disabled>
+                                      <i class="fas fa-edit"></i>
+                                    </button>
+                                  {% else %}
+                                    <button type="button" class="btn btn-info"
+                                            data-cod_cat_horario="{{ horario.cat_horario.codigo }}"
+                                            data-cod_horario="{{ items_horario.horario.cod_horario }}"
+                                            data-cod_horario_detalle="{{ aux_horario_turno.id }}">
+                                      <i class="fas fa-edit"></i>
+                                    </button>
+                                  {% endif %}
+                                </div>
+                                <span
+                                  title="&laquo;{{ aux_horario_turno.operador.alias }}&raquo;">{{ aux_horario_turno.operador.nombre }} {{ aux_horario_turno.operador.apellido_paterno }}</span>
+                              </li>
+                            {% endfor %}
+                          {% endif %}
+                          {% if False and horario.cat_horario.activo %}
+                            <li class="p-1 border-top">
+                              <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-success"
+                                        data-cod_cat_horario="{{ horario.cat_horario.codigo }}"
+                                        data-cod_horario="{{ items_horario.horario.cod_horario }}"
+                                        data-cod_dia="{{ item_dia.nro }}">
+                                  <i class="fas fa-plus-square"></i>
+                                </button>
+                              </div>
+                            </li>
+                          {% endif %}
+                        </ul>
+                      </td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

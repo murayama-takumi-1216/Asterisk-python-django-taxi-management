@@ -1,0 +1,118 @@
+{% extends "layouts/intranet.html" %}
+
+{% load static i18n %}
+
+{% block page_wrapper_title %}
+  <div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+      <h4 class="text-themecolor">Atención al cliente
+        |
+        <div class="d-inline font-12 text-black-50">Turno actual
+          <i class="font-bold">
+            {{ turno_operador_select.horario.nom_horario }}
+            - {{ turno_operador_select.fecha_programacion|date:"Y/m/d" }} </i>
+        </div> &nbsp;
+        <button type="button" class="btn btn-primary btn-sm"
+                data-horario="{{ turno_operador_select.horario.nom_horario }}"
+                data-fecha="{{ turno_operador_select.fecha_programacion|date:"Y/m/d" }}"
+                data-codigoturno="{{ turno_operador_select.id }}"
+                id="btnCerrarTurnoPreView">Cerrar turno
+        </button>
+        <button type="button" class="btn btn-primary btn-sm"
+                data-horario="{{ turno_operador_select.horario.nom_horario }}"
+                data-fecha="{{ turno_operador_select.fecha_programacion|date:"Y/m/d" }}"
+                data-codigoturno="{{ turno_operador_select.id }}"
+                id="btnCerrarTurnoOperador" style="display: none;">Cerrar turno (hide)
+        </button>
+
+      </h4>
+    </div>
+    <div class="col-md-7 align-self-center text-right">
+      <div class="d-flex justify-content-end align-items-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+          <li class="breadcrumb-item active">Atención a cliente</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+{% endblock page_wrapper_title %}
+
+{% block page_wrapper_content %}
+  {% include 'core_app/basepartials/_process_wrapper_content.html' %}
+{% endblock page_wrapper_content %}
+
+{% block modal %}
+  {% include 'core_app/modals/_modal_nuevo_servicio.html' %}
+  {% include 'core_app/modals/_modal_agregar_servicio.html' %}
+  {% include 'core_app/modals/_modal_finalizar_servicio.html' %}
+  {% include 'core_app/modals/_modal_turno_conductor.html' %}
+  {% include 'core_app/modals/_modal_cerrar_turno.html' %}
+{% endblock modal %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/modules/datatables.net-bs4/css/responsive.dataTables.min.css' %}">
+  <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/datatable-ext/css/base.css' %}">
+{% endblock css %}
+
+
+{% block base_javascript %}
+  <script
+    src="{% static 'assets/modules/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+  <script
+    src="{% static 'assets/modules/datatables.net-bs4/js/dataTables.responsive.min.js' %}"></script>
+{% endblock base_javascript %}
+
+{% block inline_javascript %}
+  <script>
+    const urlList = {
+      dashboardPage: "{% url 'core_app:process' %}",
+      access: {
+        logIn: "{% url 'core_app:core_app_api:login' %}",
+        logOut: "{% url 'core_app:core_app_api:logout' %}",
+      },
+      sesion:{
+        iniciarTurnoOperador: "{% url 'core_app:core_app_api:turnos_operador_iniciar_turno-detail' '0000' %}",
+        cerrarTurnoOperador: "{% url 'core_app:core_app_api:turnos_operador_cerrar_turno-detail' '0000' %}"
+      },
+      turno: {
+        listTurno: "{% url 'core_app_turno:core_turno_api:turnos_conductor_activos-list' %}",
+        resumenCerrarTurno: "{% url 'core_app:core_app_api:turnos_operador_resumen' %}",
+      },
+      servicio: {
+        listAsignarTaxi: "{% url 'core_app_servicio:core_servicio_api:asignar_taxi-list' %}",
+        finalizarAtencion: "{% url 'core_app_servicio:core_servicio_api:pendiente_atencion-detail' '0000' %}",
+        finalizarDetalle: "{% url 'core_app_servicio:core_servicio_api:finalizar_atencion-detail' '0000' %}",
+        listPendienteYAtencion: "{% url 'core_app_servicio:core_servicio_api:pendiente_atencion-list' %}",
+        listServiciosConductor: "{% url 'core_app_servicio:core_servicio_api:servicios_conductor-list' %}",
+      },
+      llamada: {
+        listLlamadaClientBack: "{% url 'core_app_servicio:core_servicio_api:llamada_cliente_back-list' %}",
+        listLlamadaClientBackCall: "{% url 'core_app_servicio:core_servicio_api:llamada_cliente_back-detail' '0000' %}",
+        listLlamadaCliente: "{% url 'core_app_servicio:core_servicio_api:llamada_cliente-list' %}",
+        agregarServicio: "{% url 'core_app_servicio:core_servicio_api:agregar_servicio-detail' '0000' %}",
+        contestarLlamada: "{% url 'core_app_servicio:core_servicio_api:atiende_llamada-detail' '0000' %}",
+        registrarLlamada: "{% url 'core_app_servicio:core_servicio_api:atiende_llamada-detail' '0000' %}",
+        modificarAtencion: "{% url 'core_app_servicio:core_servicio_api:modificar_atencion-detail' '0000' %}",
+      },
+      dataTablesES: "{% static 'assets/datatable-ext/language/spanish.json' %}",
+    };
+    const REFRESH_LLAMADAS_OPERADOR = parseInt("{{ refresh_llamadas }}");
+  </script>
+  <script src="{% static 'js/core_app/core_app_turno_operador_sesion.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/llamada_cliente.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/asignar_taxi.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/pendiente_en_atencion.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/atender_llamada.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/turno_conductor_modal_01.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/turno_conductor_modal_02.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/servicios_conductor.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/turno_conductor_view_modal_01.js' %}?{{ version_control_js }}"></script>
+  <script src="{% static 'js/core_servicio/turno_conductor_view_modal_02.js' %}?{{ version_control_js }}"></script>
+{% endblock inline_javascript %}

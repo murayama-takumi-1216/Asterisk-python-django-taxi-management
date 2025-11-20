@@ -1,0 +1,51 @@
+<div class="modal" id="bs-selec-operador-modal-lg" tabindex="-1" role="dialog"
+     aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Agregar/Modificar Operador</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="id_frm_agregar_operador">
+          <input type="hidden" id="id_bs_agregar_operador_cod_operador" name="cod_operador">
+          <input type="hidden" id="id_bs_agregar_operador_cod_turno" name="cod_turno">
+          <input type="hidden" id="id_bs_agregar_operador_cod_horario" name="cod_horario">
+          <input type="hidden" id="id_bs_agregar_operador_fecha" name="fecha">
+          <div class="row">
+            <div class="col-12">
+              <fieldset class="form-group form-group-sm border-cyan border p-2 mb-0" style="background-color: #03BFCA20 !important;">
+                <legend class="w-auto badge badge-cyan">OPERADORES</legend>
+                <h4 class="detalle-operador">Seleccionar al operador</h4>
+                <div data-offset="0" class="position-relative mb-1">
+                  <div class="tab-content table-responsive">
+                    <table data-toggle="table" data-mobile-responsive="true"
+                           class="table table-sm table-striped w-100" id="lista-operadores-escoger">
+                      <thead class="table-cyan">
+                      <tr>
+                        <th></th>
+                        <th>#</th>
+                        <th>Operador</th>
+                        <th>Alias</th>
+                        <th>Usuario APP</th>
+                        <th>Opc.</th>
+                      </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info waves-effect text-left"
+                id="btnSeleccionarOperadorGuardar">Guardar
+        </button>
+        <button type="button" class="btn btn-danger waves-effect text-left" id="btnSeleccionarOperadorCancelar">Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
