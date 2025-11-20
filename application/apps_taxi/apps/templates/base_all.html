@@ -54,7 +54,7 @@
 <script src="{% static 'js/project_fin.js' %}?{{ version_control_js }}"></script>
 <script type="text/javascript">
   const urlAccessList = {
-    dashboardPage: "{% url 'common:load_page' %}",
+    dashboardPage: "{% url 'core_app:dashboard' %}",
     dashboardLogin: "{% url 'core_app:login' %}",
     access: {
       logIn: "{% url 'core_app:core_app_api:login' %}",
