@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 from apps.common.models import AuditableModel, TimeStampedModel
@@ -71,7 +72,9 @@ class GrupoHorarioDetalle(AuditableModel, TimeStampedModel):
     grupo_horario = models.ForeignKey(GrupoHorario, on_delete=models.CASCADE)
     # dia de la semana comienza lunes (ISO ISO 8601)
     dia_semana = models.SmallIntegerField(
-        "Dia de la semana", choices=DIA_SEMANA_CHOICES
+        "Dia de la semana",
+        choices=DIA_SEMANA_CHOICES,
+        validators=[MinValueValidator(1), MaxValueValidator(7)],
     )
     horario = models.ForeignKey(Horario, on_delete=models.CASCADE)
     orden_view = models.SmallIntegerField("", blank=True, null=True)

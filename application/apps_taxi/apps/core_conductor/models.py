@@ -81,3 +81,16 @@ class Conductor(AuditableModel, TimeStampedModel):
             else:
                 existe = Conductor.objects.filter(licencia=licencia).exists()
         return not existe
+
+    @staticmethod
+    def validar_nombre_unico(cod_conductor, nombre, apellido_paterno):
+        """Validate unique name combination (nombre + apellido_paterno)"""
+        if nombre and apellido_paterno:
+            query = Conductor.objects.filter(
+                nombre__iexact=nombre.strip(),
+                apellido_paterno__iexact=apellido_paterno.strip(),
+            )
+            if cod_conductor:
+                query = query.exclude(cod_conductor=cod_conductor)
+            return not query.exists()
+        return True

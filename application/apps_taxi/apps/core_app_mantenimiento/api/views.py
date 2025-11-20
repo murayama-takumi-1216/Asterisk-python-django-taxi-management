@@ -118,6 +118,13 @@ class ConductoresMantenerViewSet(ProtectedAdministradorApiView, ViewSet):
             mensaje = "requiere apellido paterno"
             raise ParseError({"detail": {"message": mensaje, "data": data}})
 
+        # Validate unique name combination
+        if not Conductor.validar_nombre_unico(None, nombres, apellido_paterno):
+            mensaje = "Ya existe un conductor con el nombre {} {}".format(
+                nombres, apellido_paterno
+            )
+            raise ParseError({"detail": {"message": mensaje, "data": data}})
+
         licencia = data.get("licencia")
         clase = data.get("clase")
         fecha_vencimiento = data.get("fecha_vencimiento")
@@ -251,6 +258,15 @@ class ConductoresMantenerViewSet(ProtectedAdministradorApiView, ViewSet):
                 raise ParseError({"detail": {"message": mensaje, "data": data}})
             if not apellido_paterno:
                 mensaje = "requiere apellido paterno"
+                raise ParseError({"detail": {"message": mensaje, "data": data}})
+
+            # Validate unique name combination
+            if not Conductor.validar_nombre_unico(
+                codigo_conductor, nombres, apellido_paterno
+            ):
+                mensaje = "Ya existe un conductor con el nombre {} {}".format(
+                    nombres, apellido_paterno
+                )
                 raise ParseError({"detail": {"message": mensaje, "data": data}})
 
             licencia = data.get("licencia")

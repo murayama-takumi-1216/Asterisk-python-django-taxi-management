@@ -14,7 +14,7 @@ class OperadorHorarioView(BaseProtectedAppView, TemplateView):
         # data turno
         data_turno_operador = DataLoginTurnoOperador(self.request)
         horario_actual = data_turno_operador.horario_actual
-        dia_semana_actual = int(data_turno_operador.fecha_actual.strftime("%u"))
+        dia_semana_actual = data_turno_operador.fecha_actual.isoweekday()  # ISO 8601: Monday=1, Sunday=7
         # operador
         cat_horario = (
             CatHorarioOperardor.objects.filter(activo=True)

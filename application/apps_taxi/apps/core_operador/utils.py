@@ -41,9 +41,11 @@ def obtener_horario_view(
         aux_turno_es_activo = (
             horario_actual.cod_horario == info_turno.grupo_horario_detalle.horario_id
         ) and (dia_semana_actual == info_turno.grupo_horario_detalle.dia_semana)
+        # Fixed: Access turno_activo from the correct nested level (day number)
         aux_data = (
             data_horario_dic.get(info_turno.grupo_horario_detalle.horario_id, {})
             .get("data", {})
+            .get(info_turno.grupo_horario_detalle.dia_semana, {})
             .get("turno_activo")
         )
         if not aux_data and aux_turno_es_activo:
@@ -166,8 +168,9 @@ def generar_programacion_operador_por_fecha(
         fecha: datetime = datetime.today(), fecha_actual: datetime = datetime.today()
     ) -> [datetime]:
         fechas = []
-        dia_semana = fecha.isoweekday() - 1
-        fecha_inicio = fecha - timedelta(days=dia_semana)
+        dia_semana = fecha.isoweekday()  # ISO 8601: Monday=1, Sunday=7
+        # Calculate start of week (Monday)
+        fecha_inicio = fecha - timedelta(days=dia_semana - 1)
         for i in range(0, 7):
             aux_fecha = fecha_inicio + timedelta(days=i)
             if aux_fecha.date() >= fecha_actual.date():
@@ -180,7 +183,9 @@ def generar_programacion_operador_por_fecha(
         insertar = []
         auxi_fecha_programacion = fecha.date()
         cat_horario_operador = CatHorarioOperardor.objects.filter(
-            activo=True, fecha_inicio__lte=auxi_fecha_programacion
+            activo=True,
+            fecha_inicio__lte=auxi_fecha_programacion,
+            fecha_fin__gte=auxi_fecha_programacion,
         ).first()
 
         # Check if there's an active schedule catalog
