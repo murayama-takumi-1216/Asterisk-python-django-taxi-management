@@ -42,6 +42,12 @@ class ReporteSimpleTurnoConductorViewSet(ProtectedAdministradorApiView, ModelVie
     filter_backends = [DatatablesFilterBackend]
     renderer_classes = [DatatablesRenderer]
 
+    def get_queryset(self):
+        """Optimize queries with select_related to prevent N+1 problem"""
+        return TurnoConductor.objects.select_related(
+            'conductor', 'vehiculo', 'horario_inicio'
+        ).all()
+
     def filter_queryset(self, queryset):
         search_nombre_vehiculo = self.request.query_params.get(
             "filtro_nombre_vehiculo", None
@@ -84,6 +90,10 @@ class ReporteSimpleTurnoOperadorViewSet(ProtectedAdministradorApiView, ModelView
     filter_backends = [DatatablesFilterBackend]
     renderer_classes = [DatatablesRenderer]
 
+    def get_queryset(self):
+        """Optimize queries with select_related to prevent N+1 problem"""
+        return TurnoOperador.objects.select_related('operador', 'horario').all()
+
     def filter_queryset(self, queryset):
         filtro_fecha_actual = self.request.query_params.get("filtro_fecha_actual", None)
         if filtro_fecha_actual:
@@ -101,6 +111,12 @@ class ReporteTurnoConductorViewSet(ProtectedAdministradorApiView, ModelViewSet):
 
     filter_backends = [DatatablesFilterBackend]
     renderer_classes = [DatatablesRenderer]
+
+    def get_queryset(self):
+        """Optimize queries with select_related to prevent N+1 problem"""
+        return TurnoConductor.objects.select_related(
+            'conductor', 'vehiculo', 'horario_inicio'
+        ).all()
 
     def filter_queryset(self, queryset):
         search_codigo_conductor = self.request.query_params.get(
@@ -151,6 +167,10 @@ class ServiciosDelConductorViewSet(ProtectedAdministradorApiView, ModelViewSet):
     filter_backends = [DatatablesFilterBackend]
     renderer_classes = [DatatablesRenderer]
 
+    def get_queryset(self):
+        """Optimize queries with select_related to prevent N+1 problem"""
+        return Servicio.objects.select_related('cliente').all()
+
     def filter_queryset(self, queryset):
         codigo_turno = self.request.GET.get("codigo_turno")
         queryset = queryset.filter(
@@ -166,6 +186,12 @@ class TurnosConductorActivosViewSet(ProtectedAdministradorApiView, ModelViewSet)
 
     filter_backends = [DatatablesFilterBackend]
     renderer_classes = [DatatablesRendererLocal]
+
+    def get_queryset(self):
+        """Optimize queries with select_related to prevent N+1 problem"""
+        return TurnoConductor.objects.select_related(
+            'conductor', 'vehiculo', 'horario_inicio'
+        ).all()
 
     def filter_queryset(self, queryset):
         search_cod_vehiculo = self.request.query_params.get("search[value]", None)
@@ -187,6 +213,12 @@ class ReporteDriverVigentesViewSet(BasePermissionApiView, ModelViewSet):
 
     filter_backends = [DatatablesFilterBackend]
     renderer_classes = [DatatablesRenderer]
+
+    def get_queryset(self):
+        """Optimize queries with select_related to prevent N+1 problem"""
+        return TurnoConductor.objects.select_related(
+            'conductor', 'vehiculo', 'horario_inicio'
+        ).all()
 
     def filter_queryset(self, queryset):
         queryset = queryset.filter(conductor__estado=CONDUCTOR_ESTADO_OCUPADO)
@@ -226,7 +258,6 @@ class ReporteDriverVigentesViewSet(BasePermissionApiView, ModelViewSet):
         )
         if search_codigo_horario:
             queryset = queryset.filter(horario_inicio=search_codigo_horario)
-        print(queryset.query)
         return queryset.order_by(
             "-fecha_programacion", "-hora_programacion", "conductor__apellido_paterno"
         )
