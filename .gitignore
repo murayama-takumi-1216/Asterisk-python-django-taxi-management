@@ -5,21 +5,7 @@ Desktop.ini
 
 # Python
 __pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.so
-*.egg-info/
-*.egg
-*.manifest
-*.spec
-.python-version
 .pytest_cache/
-.coverage*
-*.cover
-*.py,cover
-.mypy_cache/
-.ruff_cache/
 
 # Virtual environments
 env/
@@ -30,9 +16,6 @@ venv*/
 .venv*/
 
 # Django/static/media artifacts
-staticfiles/
-static/
-media/
 *.log
 
 # Node/Frontend

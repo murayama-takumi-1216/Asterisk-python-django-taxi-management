@@ -1,0 +1,305 @@
+/* These styles are generated from project.scss. */
+
+.alert-debug {
+  color: black;
+  background-color: white;
+  border-color: #d6e9c6;
+}
+
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+.clockpicker-popover {
+  z-index: 1151 !important;
+}
+
+/*----- ini --------*/
+.mytooltip:hover .tooltip-content2, .mytooltip:hover .tooltip-content2 i {
+  opacity: 1;
+  font-size: 18px;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+.mytooltip:hover .tooltip-content4, .mytooltip:hover .tooltip-text2 {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.mytooltip {
+  display: inline;
+  position: relative;
+  z-index: 10;
+}
+
+.mytooltip:hover .tooltip-item::after {
+  pointer-events: auto;
+}
+
+.mytooltip:hover .tooltip-content {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+}
+
+.mytooltip:hover .tooltip-content3 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale3d(1, 1, 1);
+}
+
+.mytooltip:hover .tooltip-item2 {
+  color: #fff;
+  transform: translate3d(0, -0.5em, 0);
+}
+
+.mytooltip:hover .tooltip-inner2 {
+  transition-delay: 0.3s;
+  transform: translate3d(0, 0, 0);
+}
+
+.tooltip-inner2 {
+  background: #00aeef85;
+  padding: 40px;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.3s;
+}
+
+
+/* ----------------------------------- >>>> */
+.mytooltip:hover .tooltip-content5 {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.tooltip-content5 {
+  position: absolute;
+  z-index: 9999;
+  width: 300px;
+  left: 50%;
+  bottom: 100%;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 400;
+  color: #fff;
+  background: transparent;
+  opacity: 0;
+  margin: 0 0 20px -150px;
+  cursor: default;
+  pointer-events: none;
+  transition: opacity 0.3s 0.3s;
+}
+
+.tooltip-content5 span {
+  display: block;
+}
+
+.tooltip-content5::after {
+  content: '';
+  bottom: -20px;
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: #fb9678;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+a.mytooltip {
+  font-weight: 500;
+  color: #fb9678;
+}
+
+.mytooltip:hover .tooltip-text-primary {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-text-primary {
+  border-bottom: 10px solid #fb9678;
+  border-top: 1px solid #fb9678;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+.mytooltip:hover .tooltip-text-cyan {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-text-cyan {
+  border-bottom: 10px solid #01c0c8;
+  border-top: 1px solid #01c0c8;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+.mytooltip:hover .tooltip-text-success {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-text-success {
+  border-bottom: 10px solid #00c292;
+  border-top: 1px solid #00c292;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+/* ----------------------------------- >>>> */
+
+.mytooltip:hover .tooltip-content-cap {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.tooltip-content-cap {
+  position: absolute;
+  z-index: 9999;
+  width: 300px;
+  left: 50%;
+  bottom: 100%;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 400;
+  color: #fff;
+  background: transparent;
+  opacity: 0;
+  margin: 0 0 20px -150px;
+  cursor: default;
+  pointer-events: none;
+  transition: opacity 0.3s 0.3s;
+}
+
+.tooltip-content-cap span {
+  display: block;
+}
+
+.tooltip-content-cap::after {
+  content: '';
+  bottom: -20px;
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.tooltip-content-cap-primary::after {
+  border-top-color: #fb9678;
+}
+
+.mytooltip:hover .tooltip-content-cap-primary .tooltip-text {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-content-cap-primary .tooltip-text {
+  border-bottom: 10px solid #fb9678;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+
+.tooltip-content-cap-cyan::after {
+  border-top-color: #01c0c8;
+}
+
+.mytooltip:hover .tooltip-content-cap-cyan .tooltip-text {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-content-cap-cyan .tooltip-text {
+  border-bottom: 10px solid #01c0c8;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+.tooltip-content-cap-success::after {
+  border-top-color: #00c292;
+}
+
+.mytooltip:hover .tooltip-content-cap-success .tooltip-text {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-content-cap-success .tooltip-text {
+  border-bottom: 10px solid #00c292;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+.tooltip-content-cap-info::after {
+  border-top-color: #038fcd;
+}
+
+.mytooltip:hover .tooltip-content-cap-info .tooltip-text {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-content-cap-info .tooltip-text {
+  border-bottom: 10px solid #038fcd;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+.tooltip-content-cap-warning::after {
+  border-top-color: #fec107;
+}
+
+.mytooltip:hover .tooltip-content-cap-warning .tooltip-text {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-content-cap-warning .tooltip-text {
+  border-bottom: 10px solid #fec107;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+.tooltip-content-cap-danger::after {
+  border-top-color: #e46a76;
+}
+
+.mytooltip:hover .tooltip-content-cap-danger .tooltip-text {
+  transition-delay: 0s;
+  transform: scale3d(1, 1, 1);
+}
+
+.tooltip-content-cap-danger .tooltip-text {
+  border-bottom: 10px solid #e46a76;
+  overflow: hidden;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s 0.3s;
+}
+
+
+/*----- fin --------*/
