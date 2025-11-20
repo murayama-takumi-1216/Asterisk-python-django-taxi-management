@@ -56,7 +56,7 @@ class ListaVehiculoParaAlquilerViewSet(ProtectedAdministradorApiView, ModelViewS
 
 
 class MantenerAlquilerVehiculoViewSet(ProtectedAdministradorApiView, ViewSet):
-    permite_modificar_segundos = 15
+    permite_modificar_minutos = 15
 
     def list(self, request, *args, **kwargs):
         ast_data = {
@@ -96,14 +96,9 @@ class MantenerAlquilerVehiculoViewSet(ProtectedAdministradorApiView, ViewSet):
         if not hora_inicio:
             mensaje = "requiere hora inicio"
             raise ParseError({"detail": {"message": mensaje, "data": data}})
-        if data.get("fecha_fin") or data.get("fecha_fin") == "":
-            fecha_fin = None
-        else:
-            fecha_fin = data.get("fecha_fin")
-        if data.get("hora_fin") or data.get("hora_fin") == "":
-            hora_fin = None
-        else:
-            hora_fin = data.get("hora_fin")
+        # Set fecha_fin and hora_fin to None if empty string or missing
+        fecha_fin = data.get("fecha_fin") if data.get("fecha_fin") else None
+        hora_fin = data.get("hora_fin") if data.get("hora_fin") else None
 
         data_save = {}
         try:
@@ -169,7 +164,7 @@ class MantenerAlquilerVehiculoViewSet(ProtectedAdministradorApiView, ViewSet):
             estado_modificar = False
             ahora_tiempo = timezone.now()
             if (
-                ahora_tiempo - timedelta(minutes=self.permite_modificar_segundos)
+                ahora_tiempo - timedelta(minutes=self.permite_modificar_minutos)
             ) < alquiler.created:
                 estado_modificar = True
             serializer = AlquilerVehiculoParaAlquilerSerializer(alquiler, many=False)
