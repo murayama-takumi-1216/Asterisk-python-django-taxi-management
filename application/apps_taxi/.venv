@@ -1,0 +1,11 @@
+export DJANGO_SETTINGS_MODULE="config.settings.local"
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+export DB_PASSWORD="123"
+export DB_NAME="taxi_test"
+export DB_USER="postgres"
+export DB_PORT="5432"
+export DB_HOST="localhost"
+
+# ip port server local
+export EXEC_IPPORT=127.0.0.1:8000
