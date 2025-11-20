@@ -2,9 +2,9 @@ from rest_framework_datatables.pagination import DatatablesPageNumberPagination
 
 
 class TurnoConductorRSPagination(DatatablesPageNumberPagination):
-    page_size = 1000
+    page_size = 50
     page_size_query_param = "page_size"
-    max_page_size = 10000
+    max_page_size = 500
 
 
 class TurnoOperadorRSPagination(DatatablesPageNumberPagination):
@@ -32,6 +32,6 @@ class TurnoConductorViewRSPagination(DatatablesPageNumberPagination):
 
 
 class DriverVigentesRSPagination(DatatablesPageNumberPagination):
-    page_size = 10000
+    page_size = 100
     page_size_query_param = "page_size"
-    max_page_size = 10000
+    max_page_size = 500
