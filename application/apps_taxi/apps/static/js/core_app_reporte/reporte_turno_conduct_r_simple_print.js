@@ -32,21 +32,21 @@ $(document).ready(function () {
             extend: "excel",
             text: "Guardar excel",
             exportOptions: {
-              modifier: {page: "current"}
+              modifier: {page: "all"}  // Export all filtered data
             }
           },
           {
             extend: "pdf",
             text: "Guardar pdf",
             exportOptions: {
-              modifier: {page: "current"}
+              modifier: {page: "all"}  // Export all filtered data
             }
           },
           {
             extend: "print",
             text: "Imprimir",
             exportOptions: {
-              modifier: {page: "current"}
+              modifier: {page: "all"}  // Export all filtered data
             }
           },
         ]
