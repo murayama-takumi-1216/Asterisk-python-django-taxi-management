@@ -711,14 +711,22 @@ class OperadoresMantenerViewSet(ProtectedAdministradorApiView, ViewSet):
                     usuario = operador.user
                     usuario.is_active = True
                     usuario.save(update_fields=["is_active"])
+                operador.save(update_fields=["estado"])
+                serializer = OperadorSerializer(operador, many=False)
             elif action == "darbaja":
-                operador.estado = False
+                # Delete the user account if it exists
                 if operador.user:
                     usuario = operador.user
-                    usuario.is_active = False
-                    usuario.save(update_fields=["is_active"])
-            operador.save(update_fields=["estado"])
-            serializer = OperadorSerializer(operador, many=False)
+                    usuario.delete()
+                # Delete the operator from database (CASCADE will delete all related records)
+                operador_codigo = operador.codigo
+                operador.delete()
+                logger.info(f"Operator {operador_codigo} and all related records deleted from database")
+                # Return empty response since the operator no longer exists
+                return Response(
+                    {"message": "Operador eliminado correctamente", "codigo": operador_codigo},
+                    status=HTTP_200_OK
+                )
         else:
             nombres = data.get("nombres")
             apellido_paterno = data.get("apellido_paterno")

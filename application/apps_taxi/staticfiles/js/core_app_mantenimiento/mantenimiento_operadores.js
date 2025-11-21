@@ -247,10 +247,16 @@ $(document).ready(function () {
           if (data.estado === estadoDisponible) {
             btnEstadoCambioEstado = `
               <a href="javascript:void(0)" data-codoperador="${data.codigo}"
-              class="dropdown-item text-primary cambio-estado-darbaja"> Inactivar</a>`;
+              class="dropdown-item text-primary cambio-estado-darbaja"> Inactivar</a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0)" data-codoperador="${data.codigo}"
+              class="dropdown-item text-danger cambio-estado-eliminar"> Eliminar permanentemente</a>`;
           } else if (data.estado === estadoEnBaja) {
             btnEstadoCambioEstado = `<a href="javascript:void(0)" data-codoperador="${data.codigo}"
-              class="dropdown-item cambio-estado-activo"> Activar</a>`;
+              class="dropdown-item cambio-estado-activo"> Activar</a>
+              <div class="dropdown-divider"></div>
+              <a href="javascript:void(0)" data-codoperador="${data.codigo}"
+              class="dropdown-item text-danger cambio-estado-eliminar"> Eliminar permanentemente</a>`;
           }
           if (btnEstadoCambioEstado != "") {
             htmlAcciones = `<div class="btn-group btn-group-sm">
@@ -639,6 +645,33 @@ $(document).ready(function () {
     }).then(function (isConfirmed) {
       if (isConfirmed.value) {
         fnActualizarEstadoOperador($auxBtnExce, "darbaja");
+        return true;
+      }
+      $auxBtnExce.prop("disabled", false);
+    });
+
+  });
+
+  $("#lista-mant-operadores tbody").on("click", ".cambio-estado-eliminar", function () {
+    const $auxBtnExce = $(this);
+
+    swal.fire({
+      title: "Alerta Operador - Eliminar Permanentemente",
+      html: `Se <b>ELIMINARÁ PERMANENTEMENTE</b> al operador de la base de datos. <br><br>
+             <b class="text-danger">⚠️ Esta acción NO se puede deshacer.</b><br><br>
+             ¿Está seguro de que desea continuar?`,
+      type: "warning",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      showConfirmButton: true,
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: `<i class="fa fa-trash"></i> Sí, eliminar permanentemente`,
+      cancelButtonText: `<i class="fa fa-times"></i> Cancelar`
+    }).then(function (isConfirmed) {
+      if (isConfirmed.value) {
+        fnActualizarEstadoOperador($auxBtnExce, "eliminar");
         return true;
       }
       $auxBtnExce.prop("disabled", false);
