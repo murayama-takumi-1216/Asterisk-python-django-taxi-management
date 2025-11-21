@@ -3,4 +3,4 @@ __version_info__ = tuple(
     int(num) if num.isdigit() else num
     for num in __version__.replace("-", ".", 1).split(".")
 )
-__subversion__ = "035"
+__subversion__ = "037"

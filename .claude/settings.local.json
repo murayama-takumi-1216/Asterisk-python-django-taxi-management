@@ -19,7 +19,9 @@
       "Bash(dir:*)",
       "Bash(find:*)",
       "Bash(python:*)",
-      "Bash(\"E:\\workana\\carlos project\\www_backup\\var\\www\\application\\venvpy\\Scripts\\python.exe\" manage.py check)"
+      "Bash(\"E:\\workana\\carlos project\\www_backup\\var\\www\\application\\venvpy\\Scripts\\python.exe\" manage.py check)",
+      "Bash(\"E:\\workana\\carlos project\\www_backup\\var\\www\\application\\venvpy\\Scripts\\python.exe\" manage.py shell:*)",
+      "Bash(\"E:\\workana\\carlos project\\www_backup\\var\\www\\application\\venvpy\\Scripts\\python.exe\" manage.py loaddata horario.json)"
     ],
     "deny": [],
     "ask": []

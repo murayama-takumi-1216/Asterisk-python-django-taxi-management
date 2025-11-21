@@ -95,7 +95,8 @@ class ListarTurnosViewSet(ProtectedAdministradorApiView, ViewSet):
             }
             for horario in qs_horarios
         }
-        keys_horario = horarios.keys()
+        keys_horario = list(horarios.keys())
+        logger.info(f"Horarios found: {len(qs_horarios)}, keys_horario: {keys_horario}")
         # ----------- horario-fin <<----------
         # ----------- operario-ini ---------->>
         qs_operarios = Operador.objects.filter(estado=True).order_by("apellido_paterno")
@@ -187,6 +188,9 @@ class ListarTurnosViewSet(ProtectedAdministradorApiView, ViewSet):
         cod_operador = data.get("cod_operador")
         cod_horario = data.get("cod_horario")
         fecha = data.get("fecha")
+
+        logger.info(f"Creating TurnoOperador with data: cod_operador={cod_operador}, cod_horario={cod_horario}, fecha={fecha}")
+
         if cod_turno:
             mensaje = "No se permite crear"
             raise ParseError({"detail": {"message": mensaje, "data": data}})
@@ -194,46 +198,67 @@ class ListarTurnosViewSet(ProtectedAdministradorApiView, ViewSet):
         if not fecha:
             mensaje = "Requiere fecha"
             raise ParseError({"detail": {"message": mensaje, "data": data}})
+        if not cod_operador:
+            mensaje = "Requiere código de operador"
+            raise ParseError({"detail": {"message": mensaje, "data": data}})
+        if not cod_horario:
+            mensaje = "Requiere código de horario"
+            raise ParseError({"detail": {"message": mensaje, "data": data}})
+
         operador = Operador.objects.filter(codigo=cod_operador).first()
         if not operador:
-            mensaje = "No se encuentra operador"
-            raise ParseError({"detail": {"message": mensaje, "data": data}})
+            mensaje = f"No se encuentra operador con código {cod_operador}"
+            logger.error(mensaje)
+            raise ParseError({"detail": {"message": mensaje}})
+
         horario = Horario.objects.filter(cod_horario=cod_horario).first()
         if not horario:
-            mensaje = "No se encuentra horario"
-            raise ParseError({"detail": {"message": mensaje, "data": data}})
-        data_save = {}
+            mensaje = f"No se encuentra horario con código {cod_horario}"
+            logger.error(mensaje)
+            raise ParseError({"detail": {"message": mensaje}})
+
+        # Check if this turno already exists
+        existing_turno = TurnoOperador.objects.filter(
+            operador=operador,
+            horario=horario,
+            fecha_programacion=fecha
+        ).first()
+
+        if existing_turno:
+            mensaje = f"Ya existe un turno para el operador {operador.nombre} {operador.apellido_paterno} en el horario {horario.nom_horario} para la fecha {fecha}"
+            logger.warning(mensaje)
+            raise ParseError({"detail": {"message": mensaje}})
+
+        data_save = {
+            "operador": operador.codigo,
+            "horario": horario.cod_horario,
+            "fecha_programacion": fecha,
+            "hora_programacion": horario.inicio_horario,
+            "hora_fin_programacion": horario.fin_horario,
+            "estado_turno": ESTADO_TURNO_PROGRAMADO,
+        }
+
+        logger.info(f"Prepared data for serializer: {data_save}")
+
+        serializer = TurnoOperadorSerializer(data=data_save)
+        if not serializer.is_valid():
+            logger.error(f"Serializer validation errors: {serializer.errors}")
+            mensaje = f"Error de validación: {serializer.errors}"
+            raise ParseError({"detail": {"message": mensaje, "errors": serializer.errors}})
+
         try:
-            turno_operario = TurnoOperador(
+            turno_operario = serializer.save(
                 created_by=request.user.username,
-                modified_by=request.user.username,
-                operador=operador,
-                horario=horario,
-                fecha_programacion=fecha,
-                hora_programacion=horario.inicio_horario,
-                hora_fin_programacion=horario.fin_horario,
-                estado_turno=ESTADO_TURNO_PROGRAMADO,
+                modified_by=request.user.username
             )
-            data_save.update(
-                {
-                    "operador": operador.codigo,
-                    "horario": horario.cod_horario,
-                    "fecha_programacion": fecha,
-                    "hora_programacion": horario.inicio_horario,
-                    "hora_fin_programacion": horario.fin_horario,
-                    "estado_turno": ESTADO_TURNO_PROGRAMADO,
-                }
-            )
+            logger.info(f"Successfully created TurnoOperador with id={turno_operario.id}")
+            return Response(serializer.data, status=HTTP_201_CREATED)
         except Exception as ex:
-            mensaje = "Error al actualizar, vuelve intentar"
-            logger.warning(mensaje, exc_info=True, extra={"exception": str(ex)})
+            mensaje = "Error al guardar, vuelve intentar"
+            logger.error(mensaje, exc_info=True, extra={"exception": str(ex)})
             raise APIException(
-                {"error": {"message": mensaje, "errors": [ex], "data": data}}
+                {"error": {"message": mensaje, "errors": [str(ex)]}}
             )
-        serializer = TurnoOperadorSerializer(turno_operario, data=data_save)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(serializer.data, status=HTTP_201_CREATED)
 
     def retrieve(self, request, *args, **kwargs):
         data_out = {}

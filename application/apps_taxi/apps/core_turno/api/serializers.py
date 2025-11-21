@@ -5,7 +5,7 @@ from apps.core_turno.models import TurnoConductor, TurnoOperador
 
 
 class TurnoOperadorSerializer(serializers.ModelSerializer):
-    operador_data = serializers.SerializerMethodField()
+    operador_data = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = TurnoOperador
@@ -16,6 +16,7 @@ class TurnoOperadorSerializer(serializers.ModelSerializer):
             "extension_numero",
             "fecha_programacion",
             "hora_programacion",
+            "hora_fin_programacion",
             "hora_inicio",
             "hora_fin",
             "estado_turno",
@@ -24,6 +25,7 @@ class TurnoOperadorSerializer(serializers.ModelSerializer):
             "servicios_asignadas",
             "operador_data",
         ]
+        read_only_fields = ["id", "operador_data"]
 
         datatables_always_serialize = [key for key in fields]
 

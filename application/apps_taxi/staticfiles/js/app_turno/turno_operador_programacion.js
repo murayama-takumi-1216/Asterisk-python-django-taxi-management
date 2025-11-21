@@ -53,18 +53,30 @@ $(document).ready(function () {
     } else if (keyHorario == TURNO_HORARIO_03) {
       colorBtn = "btn-cyan";
     }
-    let turnoOperador = (data[(dataHorariosKeys[keyHorario] ?? "")] ?? {});
+
+    // Get horario code from dataHorariosKeys - this is the actual horario codigo
+    let horarioCodigo = "";
+    if (typeof dataHorariosKeys === 'object' && dataHorariosKeys !== null) {
+      // dataHorariosKeys is an object/array, get the value at keyHorario index
+      horarioCodigo = dataHorariosKeys[keyHorario] ?? "";
+    }
+
+    console.log(`fnDataViewOperadorHoarios - keyHorario: ${keyHorario}, horarioCodigo: ${horarioCodigo}`);
+    console.log("dataHorariosKeys:", dataHorariosKeys);
+
+    let turnoOperador = (data[horarioCodigo] ?? {});
     let codigo_turno = turnoOperador.turno_id ?? "";
     let codigo_operador = turnoOperador.operador ?? "";
     let operador = dataOperadores[codigo_operador] ?? {};
-    let horario = (dataHorarios[(dataHorariosKeys[keyHorario] ?? "")] ?? {codigo: ""});
+    let horario = (dataHorarios[horarioCodigo] ?? {codigo: horarioCodigo});
+
     // let estadoTurno = (turnoOperador.estado_turno_text) ? `| ${turnoOperador.estado_turno_text ?? ""}` : "";
     let estadoTurno = (turnoOperador.estado_turno_text) ? `${turnoOperador.estado_turno_text ?? ""}` : "";
     // let htmlView = `<span class="text-black-50">${horario.nom_horario} |
     //     ${horario.inicio_horario}-${horario.fin_horario} ${estadoTurno}</span>`;
     let htmlView = `<span class="text-black-50">${estadoTurno}</span>`;
     let frmData = ` data-codigoturno="${codigo_turno}" data-fecha="${data.fecha}" data-dia="${data.dia}"
-           data-codigooperario="${codigo_operador}" data-codigohorario="${horario.codigo}"`;
+           data-codigooperario="${codigo_operador}" data-codigohorario="${horarioCodigo}"`;
     let frmBtn = "";
     if (codigo_turno == "") {
       frmBtn = `<button type="button" class="btn btn-sm ${colorBtn} agregar-operador"
@@ -283,6 +295,14 @@ $(document).ready(function () {
     let codigoHorario = $auxBtn.data("codigohorario") ?? "";
     let fecha = $auxBtn.data("fecha") ?? "";
     let diaNombre = $auxBtn.data("dia") ?? "";
+
+    console.log("=== Button Clicked ===");
+    console.log("Button element:", $auxBtn[0]);
+    console.log("codigoHorario from button:", codigoHorario);
+    console.log("All button data attributes:", $auxBtn.data());
+    console.log("dataHorariosKeys:", dataHorariosKeys);
+    console.log("dataHorarios:", dataHorarios);
+
     let dataHorario = dataHorarios[codigoHorario] ?? {};
     let nombreHorario = dataHorario.nom_horario ?? "-";
     let rangoHorario = `[${dataHorario.inicio_horario ?? "*"}-${dataHorario.fin_horario ?? "*"}]`;
@@ -321,7 +341,17 @@ $(document).ready(function () {
     const csrfToken = plgcliGetCookie(FRM_CSRF_TOKEN) ?? "";
     const numeroId = $campoBsSelectCodigoTurno.val();
     const codigoOperador = $campoBsSeleccionarOperador.val();
+    const codigoHorario = $campoBsSelectCodigoHorario.val();
+    const fecha = $campoBsSelectFecha.val();
     const _data = $("#id_frm_agregar_operador :input").serializeArray();
+
+    console.log("=== Guardar Turno Operador ===");
+    console.log("numeroId:", numeroId);
+    console.log("codigoOperador:", codigoOperador);
+    console.log("codigoHorario:", codigoHorario);
+    console.log("fecha:", fecha);
+    console.log("_data:", _data);
+
     let auxUrl = "";
     let auxType = "PATCH";
     if (numeroId == "") {
@@ -330,6 +360,10 @@ $(document).ready(function () {
     } else {
       auxUrl = urlList.turnoOperador.detalleTurno.replace("/0000/", `/${numeroId}/`);
     }
+
+    console.log("auxUrl:", auxUrl);
+    console.log("auxType:", auxType);
+
     if (codigoOperador == "") {
       swal.fire({
         title: "Alerta",
@@ -337,6 +371,19 @@ $(document).ready(function () {
         type: "warning",
         showConfirmButton: true, confirmButtonText: "Cerrar",
       });
+      return false;
+    }
+
+    if (!codigoHorario || codigoHorario === "") {
+      swal.fire({
+        title: "Alerta - Error Interno",
+        html: `No se pudo obtener el código de horario.<br><br>
+               codigoHorario: "${codigoHorario}"<br>
+               Por favor, refresque la página e intente nuevamente.`,
+        type: "error",
+        showConfirmButton: true, confirmButtonText: "Cerrar",
+      });
+      console.error("codigoHorario is empty! Full _data:", _data);
       return false;
     }
     $.ajax({
@@ -356,10 +403,19 @@ $(document).ready(function () {
         $auxBtnExce.prop("disabled", false);
         let mensaje = "";
         try {
-          mensaje = request.responseJSON.data_ws.error.message;
+          // Try multiple possible error message locations
+          if (request.responseJSON) {
+            mensaje = request.responseJSON.data_ws?.error?.message ||
+                      request.responseJSON.detail?.message ||
+                      request.responseJSON.message ||
+                      JSON.stringify(request.responseJSON);
+          } else {
+            mensaje = "No se llego guardar";
+          }
         } catch (e) {
           mensaje = "No se llego guardar";
         }
+        console.error("Error al guardar turno operador:", request.responseJSON);
         swal.fire({
           title: "Alerta",
           text: mensaje,
