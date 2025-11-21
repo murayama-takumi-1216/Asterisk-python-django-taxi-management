@@ -20,7 +20,7 @@ def invalidate_operator_report_cache(fecha_programacion=None):
     elif isinstance(fecha_programacion, datetime):
         fecha_programacion = fecha_programacion.date()
 
-    cache_key = f"reporte_turno_operador_{fecha_programacion}"
+    cache_key = f"reporte_turno_operador_data_{fecha_programacion}"
     cache.delete(cache_key)
     logger.info(f"Invalidated operator report cache: {cache_key}")
 
@@ -38,7 +38,7 @@ def invalidate_operator_summary_cache(fecha=None):
     elif isinstance(fecha, datetime):
         fecha = fecha.date()
 
-    cache_key = f"reporte_resumen_operadores_{fecha}"
+    cache_key = f"reporte_resumen_operadores_data_{fecha}"
     cache.delete(cache_key)
     logger.info(f"Invalidated operator summary cache: {cache_key}")
 
@@ -61,8 +61,8 @@ def invalidate_conductor_report_cache(fecha_inicio=None, fecha_fin=None):
 def clear_all_report_caches():
     """Clear all report-related caches. Use with caution."""
     patterns = [
-        "reporte_turno_operador_*",
-        "reporte_resumen_operadores_*",
+        "reporte_turno_operador_data_*",
+        "reporte_resumen_operadores_data_*",
         "reporte_turno_conductor_*",
     ]
     for pattern in patterns:

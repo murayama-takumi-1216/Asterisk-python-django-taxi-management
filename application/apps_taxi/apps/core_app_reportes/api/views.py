@@ -80,20 +80,26 @@ class ReporteResumenTurnoOperadoresViewSet(ProtectedAdministradorApiView, ModelV
         filtro_fecha_actual = request.query_params.get("filtro_fecha_actual", None)
 
         # Generate cache key based on filter parameters
-        cache_key = f"reporte_resumen_operadores_{filtro_fecha_actual}"
+        cache_key = f"reporte_resumen_operadores_data_{filtro_fecha_actual}"
 
-        # Try to get cached data
+        # Try to get cached data (caching the serialized data, not the response)
         cached_data = cache.get(cache_key)
         if cached_data is not None:
             logger.debug(f"Cache HIT for {cache_key}")
-            return cached_data
+            # Return cached data in a new Response object
+            from rest_framework.response import Response
+            return Response(cached_data)
 
         logger.debug(f"Cache MISS for {cache_key}")
         # If not in cache, get from database
         response = super().list(request, *args, **kwargs)
 
-        # Cache for 1 hour (3600 seconds)
-        cache.set(cache_key, response, 3600)
+        # Cache the response data (dict), not the Response object
+        # This avoids rendering and pickling issues
+        try:
+            cache.set(cache_key, response.data, 3600)
+        except Exception as e:
+            logger.warning(f"Failed to cache data for {cache_key}: {e}")
 
         return response
 
@@ -124,19 +130,25 @@ class ReporteSimpleTurnoOperadorViewSet(ProtectedAdministradorApiView, ModelView
         filtro_fecha_actual = request.query_params.get("filtro_fecha_actual", None)
 
         # Generate cache key
-        cache_key = f"reporte_turno_operador_{filtro_fecha_actual}"
+        cache_key = f"reporte_turno_operador_data_{filtro_fecha_actual}"
 
-        # Try cache first
+        # Try cache first (caching the serialized data, not the response)
         cached_data = cache.get(cache_key)
         if cached_data is not None:
             logger.debug(f"Cache HIT for {cache_key}")
-            return cached_data
+            # Return cached data in a new Response object
+            from rest_framework.response import Response
+            return Response(cached_data)
 
         logger.debug(f"Cache MISS for {cache_key}")
         response = super().list(request, *args, **kwargs)
 
-        # Cache for 30 minutes (1800 seconds)
-        cache.set(cache_key, response, 1800)
+        # Cache the response data (dict), not the Response object
+        # This avoids rendering and pickling issues
+        try:
+            cache.set(cache_key, response.data, 1800)
+        except Exception as e:
+            logger.warning(f"Failed to cache data for {cache_key}: {e}")
 
         return response
 

@@ -29,14 +29,16 @@ Local development uses Redis if available (via `REDIS_URL` env var), otherwise f
 ### 1. Daily Summary Report
 - **Endpoint**: `ReporteResumenTurnoOperadoresViewSet`
 - **Cache Duration**: 1 hour (3600 seconds)
-- **Cache Key Pattern**: `reporte_resumen_operadores_{fecha}`
+- **Cache Key Pattern**: `reporte_resumen_operadores_data_{fecha}`
 - **Use Case**: Daily operator shift summaries
+- **Important**: Caches `response.data` (serialized dict), not the Response object
 
 ### 2. Operator Shift Report
 - **Endpoint**: `ReporteSimpleTurnoOperadorViewSet`
 - **Cache Duration**: 30 minutes (1800 seconds)
-- **Cache Key Pattern**: `reporte_turno_operador_{fecha}`
+- **Cache Key Pattern**: `reporte_turno_operador_data_{fecha}`
 - **Use Case**: Detailed operator shift data for a specific date
+- **Important**: Caches `response.data` (serialized dict), not the Response object
 
 ## Cache Invalidation
 
@@ -134,3 +136,20 @@ REDIS_URL=redis://localhost:6379/1
    - Provide manual invalidation for admin operations
 
 4. **Monitoring**: Track cache hit/miss rates to optimize duration
+
+5. **Cache Data, Not Response Objects**: Always cache `response.data`, not the Response
+   ```python
+   # Get response from parent class
+   response = super().list(request, *args, **kwargs)
+
+   # Cache the data dict, not the Response object
+   cache.set(cache_key, response.data, timeout)
+
+   # On cache hit, return new Response with cached data
+   cached_data = cache.get(cache_key)
+   if cached_data:
+       from rest_framework.response import Response
+       return Response(cached_data)
+   ```
+   - **Why**: Response objects cannot be pickled/cached directly
+   - Caching `response.data` (dict) avoids rendering and serialization issues
