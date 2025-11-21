@@ -23,7 +23,7 @@ $(document).ready(function () {
   const btnHtmlBuscarLoad = `<span class="btn-label">${ICO_CARGANDO}</span>Buscar`;
 
   let dataHorarios = {};
-  let dataHorariosKeys = {};
+  let dataHorariosKeys = [];
   let dataOperadores = {};
 
   function ocultarColumProgTurnoOperDatatable() {
@@ -54,12 +54,8 @@ $(document).ready(function () {
       colorBtn = "btn-cyan";
     }
 
-    // Get horario code from dataHorariosKeys - this is the actual horario codigo
-    let horarioCodigo = "";
-    if (typeof dataHorariosKeys === 'object' && dataHorariosKeys !== null) {
-      // dataHorariosKeys is an object/array, get the value at keyHorario index
-      horarioCodigo = dataHorariosKeys[keyHorario] ?? "";
-    }
+    // Get horario code from dataHorariosKeys array - this is the actual horario codigo
+    let horarioCodigo = dataHorariosKeys[keyHorario] ?? "";
 
     console.log(`fnDataViewOperadorHoarios - keyHorario: ${keyHorario}, horarioCodigo: ${horarioCodigo}`);
     console.log("dataHorariosKeys:", dataHorariosKeys);
