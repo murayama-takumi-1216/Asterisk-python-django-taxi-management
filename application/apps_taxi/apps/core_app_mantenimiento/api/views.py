@@ -707,14 +707,16 @@ class OperadoresMantenerViewSet(ProtectedAdministradorApiView, ViewSet):
         if action in ["activar", "darbaja"]:
             if action == "activar":
                 operador.estado = True
-                usuario = operador.user
-                usuario.is_active = True
-                usuario.save(update_fields=["is_active"])
+                if operador.user:
+                    usuario = operador.user
+                    usuario.is_active = True
+                    usuario.save(update_fields=["is_active"])
             elif action == "darbaja":
                 operador.estado = False
-                usuario = operador.user
-                usuario.is_active = False
-                usuario.save(update_fields=["is_active"])
+                if operador.user:
+                    usuario = operador.user
+                    usuario.is_active = False
+                    usuario.save(update_fields=["is_active"])
             operador.save(update_fields=["estado"])
             serializer = OperadorSerializer(operador, many=False)
         else:
