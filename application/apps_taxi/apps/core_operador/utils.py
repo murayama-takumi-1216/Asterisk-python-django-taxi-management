@@ -15,53 +15,85 @@ def obtener_horario_view(
     horario_actual: Horario,
     dia_semana_actual: int,
 ):
+    """
+    Obtiene la vista de horarios mostrando los turnos programados de TurnoOperador.
+    Muestra los turnos programados para la semana actual basándose en fecha_programacion.
+    """
     data = {}
-    cat_hora_detalles = CatHorarioOperardorDetalle.objects.filter(
-        cat_horario=cat_horario_activo
-    ).order_by("grupo_horario_detalle__orden_view")
+
+    # Calculate current week dates (Monday to Sunday)
+    fecha_hoy = datetime.today()
+    dia_semana = fecha_hoy.isoweekday()  # ISO 8601: Monday=1, Sunday=7
+    fecha_inicio_semana = fecha_hoy - timedelta(days=dia_semana - 1)  # Monday
+    fecha_fin_semana = fecha_inicio_semana + timedelta(days=6)  # Sunday
+
+    logger.info(f"Obtaining schedule view for week: {fecha_inicio_semana.date()} to {fecha_fin_semana.date()}")
+
+    # Query TurnoOperador for current week
+    # Include PROGRAMADO (02), ACTIVO (03), CONCLUIDO (04), CANCELADO (05)
+    turnos_semana = TurnoOperador.objects.filter(
+        fecha_programacion__gte=fecha_inicio_semana.date(),
+        fecha_programacion__lte=fecha_fin_semana.date(),
+        estado_turno__in=[ESTADO_TURNO_PROGRAMADO, '03', '04', '05']  # Include active and completed states
+    ).select_related('operador', 'horario').order_by('fecha_programacion', 'horario__orden_view')
+
+    logger.info(f"Found {turnos_semana.count()} turnos for the week")
+
     # --- construir horario ------------->
     horario_base = Horario.objects.filter(horario_base=True).order_by("orden_view")
     dias_semana_dic = dict(DIA_SEMANA_CHOICES)
     data_horario_dic = {}
+
     for item_horario in horario_base:
         aux_turno = {"horario": item_horario, "data": {}}
         for dia_nro, dia_nombre in dias_semana_dic.items():
             aux_dia = {
                 "nro": dia_nro,
                 "nombre": dia_nombre,
-                # "horario_turno": None,
                 "horario_turno_data": [],
             }
             aux_turno.get("data").update({dia_nro: aux_dia})
         data_horario_dic.update({item_horario.cod_horario: aux_turno})
     # --- construir horario <-------------
 
-    # --- obtener datos de turno ------------->
-    for info_turno in cat_hora_detalles:
+    # --- obtener datos de turno desde TurnoOperador ------------->
+    for turno_operador in turnos_semana:
+        if not turno_operador.horario:
+            continue
+
+        dia_semana_turno = turno_operador.fecha_programacion.isoweekday()
+        horario_codigo = turno_operador.horario.cod_horario
+
+        # Check if this is the current active shift
         aux_turno_es_activo = (
-            horario_actual.cod_horario == info_turno.grupo_horario_detalle.horario_id
-        ) and (dia_semana_actual == info_turno.grupo_horario_detalle.dia_semana)
-        # Fixed: Access turno_activo from the correct nested level (day number)
-        aux_data = (
-            data_horario_dic.get(info_turno.grupo_horario_detalle.horario_id, {})
+            horario_actual.cod_horario == horario_codigo
+        ) and (dia_semana_actual == dia_semana_turno)
+
+        # Get the day data
+        day_data = (
+            data_horario_dic.get(horario_codigo, {})
             .get("data", {})
-            .get(info_turno.grupo_horario_detalle.dia_semana, {})
-            .get("turno_activo")
+            .get(dia_semana_turno, {})
         )
-        if not aux_data and aux_turno_es_activo:
-            data_horario_dic.get(info_turno.grupo_horario_detalle.horario_id, {}).get(
-                "data", {}
-            ).get(info_turno.grupo_horario_detalle.dia_semana, {}).update(
-                {"turno_activo": aux_turno_es_activo}
-            )
-        # else:
-        data_horario_dic.get(info_turno.grupo_horario_detalle.horario_id, {}).get(
-            "data", {}
-        ).get(info_turno.grupo_horario_detalle.dia_semana, {}).get(
-            "horario_turno_data", []
-        ).append(
-            info_turno
-        )
+
+        if day_data:
+            # Mark as active if applicable
+            if aux_turno_es_activo and not day_data.get("turno_activo"):
+                day_data.update({"turno_activo": aux_turno_es_activo})
+
+            # Create a wrapper object similar to CatHorarioOperardorDetalle
+            # to maintain compatibility with the template
+            # confirmado = True means the turno has started (ACTIVO or later states)
+            turno_wrapper = type('TurnoWrapper', (), {
+                'id': turno_operador.id,
+                'operador': turno_operador.operador,
+                'confirmado': turno_operador.estado_turno not in [ESTADO_TURNO_PROGRAMADO],
+                'fecha_inicio': turno_operador.fecha_programacion,
+                'fecha_fin': turno_operador.fecha_programacion,
+            })()
+
+            # Append to horario_turno_data
+            day_data.get("horario_turno_data", []).append(turno_wrapper)
 
     # --- obtener datos de turno <-------------
 
