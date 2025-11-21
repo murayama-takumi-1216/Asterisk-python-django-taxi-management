@@ -209,7 +209,7 @@ class MantenerAlquilerVehiculoViewSet(ProtectedAdministradorApiView, ViewSet):
         # verificar tiempo de inicio alquiler para modificar
         ahora_tiempo = timezone.now()
         if (
-            ahora_tiempo - timedelta(minutes=self.permite_modificar_segundos)
+            ahora_tiempo - timedelta(minutes=self.permite_modificar_minutos)
         ) < alquiler.created:
             entrega_radio = True if data.get("entrega_radio", "") == "SI" else False
             conductor = Conductor.objects.filter(cod_conductor=cod_coductor).first()

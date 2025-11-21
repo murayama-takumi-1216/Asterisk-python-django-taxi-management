@@ -30,6 +30,7 @@ from apps.core_conductor.constants import (
     CONDUCTOR_ESTADO_BAJA,
     CONDUCTOR_ESTADO_DISPONIBLE,
     CONDUCTOR_ESTADO_OCUPADO,
+    CONDUCTOR_ESTADO_PENDIENTE,
 )
 from apps.core_conductor.models import Conductor
 from apps.core_maestras.models import GrupoHorario
@@ -61,8 +62,10 @@ class ConductorListViewSet(ProtectedAdministradorApiView, ModelViewSet):
             "ver_conductor_todos_los_estados", None
         )
         if not ver_conductor_todos_los_estados:
+            # Include PENDIENTE state so newly added conductors are visible
             queryset = queryset.filter(
                 estado__in=[
+                    CONDUCTOR_ESTADO_PENDIENTE,
                     CONDUCTOR_ESTADO_AUSENTE,
                     CONDUCTOR_ESTADO_OCUPADO,
                     CONDUCTOR_ESTADO_DISPONIBLE,
