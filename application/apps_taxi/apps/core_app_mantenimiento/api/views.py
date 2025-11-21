@@ -242,12 +242,22 @@ class ConductoresMantenerViewSet(ProtectedAdministradorApiView, ViewSet):
                 raise ParseError({"detail": {"message": mensaje, "data": data}})
             if action == "disponible":
                 conductor.estado = CONDUCTOR_ESTADO_DISPONIBLE
+                conductor.save(update_fields=["estado"])
+                serializer = ConductorSerializer(conductor, many=False)
             elif action == "ausente":
                 conductor.estado = CONDUCTOR_ESTADO_AUSENTE
+                conductor.save(update_fields=["estado"])
+                serializer = ConductorSerializer(conductor, many=False)
             elif action == "darbaja":
-                conductor.estado = CONDUCTOR_ESTADO_BAJA
-            conductor.save(update_fields=["estado"])
-            serializer = ConductorSerializer(conductor, many=False)
+                # Delete the conductor from database (CASCADE will delete all related records)
+                conductor_codigo = conductor.cod_conductor
+                conductor.delete()
+                logger.info(f"Conductor {conductor_codigo} and all related records deleted from database")
+                # Return empty response since the conductor no longer exists
+                return Response(
+                    {"message": "Conductor eliminado correctamente", "codigo": conductor_codigo},
+                    status=HTTP_200_OK
+                )
         else:
             nombres = data.get("nombres")
             apellido_paterno = data.get("apellido_paterno")
