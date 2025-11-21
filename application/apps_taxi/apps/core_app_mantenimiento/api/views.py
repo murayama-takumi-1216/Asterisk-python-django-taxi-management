@@ -69,9 +69,9 @@ class ConductorListViewSet(ProtectedAdministradorApiView, ModelViewSet):
                 ]
             )
         if search_cod_conductor:
+            # Only search in visible fields (removed cod_conductor as it's a hidden ID field like "DRI000001")
             queryset = queryset.filter(
-                Q(cod_conductor__icontains=search_cod_conductor)
-                | Q(nombre__icontains=search_cod_conductor)
+                Q(nombre__icontains=search_cod_conductor)
                 | Q(apellido_paterno__icontains=search_cod_conductor)
                 | Q(apellido_materno__icontains=search_cod_conductor)
                 | Q(licencia__icontains=search_cod_conductor)
@@ -587,10 +587,11 @@ class OperadorListViewSet(ProtectedAdministradorApiView, ModelViewSet):
         if not ver_operador_todos_los_estados:
             queryset = queryset.filter(estado=True)
         if search_cod_operador:
+            # Only search in visible fields (removed codigo as it's a hidden ID field like "OPE000001")
             queryset = queryset.filter(
-                Q(codigo__icontains=search_cod_operador)
-                | Q(nombre__icontains=search_cod_operador)
+                Q(nombre__icontains=search_cod_operador)
                 | Q(apellido_paterno__icontains=search_cod_operador)
+                | Q(alias__icontains=search_cod_operador)
             )
 
         return queryset.order_by("nombre", "apellido_paterno")
