@@ -496,12 +496,22 @@ class VehiculosMantenerViewSet(ProtectedAdministradorApiView, ViewSet):
                 raise ParseError({"detail": {"message": mensaje, "data": data}})
             if action == "disponible":
                 vehiculo.estado_vehiculo = CAR_ESTADO_ACTIVO
+                vehiculo.save(update_fields=["estado_vehiculo"])
+                serializer = VehiculoSerializer(vehiculo, many=False)
             elif action == "ausente":
                 vehiculo.estado_vehiculo = CAR_ESTADO_FUERASERVICIO
+                vehiculo.save(update_fields=["estado_vehiculo"])
+                serializer = VehiculoSerializer(vehiculo, many=False)
             elif action == "darbaja":
-                vehiculo.estado_vehiculo = CAR_ESTADO_BAJA
-            vehiculo.save(update_fields=["estado_vehiculo"])
-            serializer = VehiculoSerializer(vehiculo, many=False)
+                # Delete the vehicle from database (CASCADE will delete all related records)
+                vehiculo_codigo = vehiculo.cod_vehiculo
+                vehiculo.delete()
+                logger.info(f"Vehicle {vehiculo_codigo} and all related records deleted from database")
+                # Return empty response since the vehicle no longer exists
+                return Response(
+                    {"message": "Vehículo eliminado correctamente", "codigo": vehiculo_codigo},
+                    status=HTTP_200_OK
+                )
         else:
             nombre = data.get("nombre")
             marca = data.get("marca")
