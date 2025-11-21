@@ -70,11 +70,11 @@ class ConductorListViewSet(ProtectedAdministradorApiView, ModelViewSet):
             )
         if search_cod_conductor:
             queryset = queryset.filter(
-                Q(cod_conductor__istartswith=search_cod_conductor)
-                | Q(nombre__istartswith=search_cod_conductor)
-                | Q(apellido_paterno__istartswith=search_cod_conductor)
-                | Q(apellido_materno__istartswith=search_cod_conductor)
-                | Q(licencia__istartswith=search_cod_conductor)
+                Q(cod_conductor__icontains=search_cod_conductor)
+                | Q(nombre__icontains=search_cod_conductor)
+                | Q(apellido_paterno__icontains=search_cod_conductor)
+                | Q(apellido_materno__icontains=search_cod_conductor)
+                | Q(licencia__icontains=search_cod_conductor)
             )
         return queryset.order_by("nombre", "apellido_paterno")
 
@@ -347,8 +347,8 @@ class VehiculoListViewSet(ProtectedAdministradorApiView, ModelViewSet):
             )
         if search_cod_vehiculo:
             queryset = queryset.filter(
-                Q(nom_vehiculo__istartswith=search_cod_vehiculo)
-                | Q(matricula__istartswith=search_cod_vehiculo)
+                Q(nom_vehiculo__icontains=search_cod_vehiculo)
+                | Q(matricula__icontains=search_cod_vehiculo)
             )
 
         return queryset.order_by("nom_vehiculo")
@@ -588,9 +588,9 @@ class OperadorListViewSet(ProtectedAdministradorApiView, ModelViewSet):
             queryset = queryset.filter(estado=True)
         if search_cod_operador:
             queryset = queryset.filter(
-                Q(codigo__istartswith=search_cod_operador)
-                | Q(nombre__istartswith=search_cod_operador)
-                | Q(apellido_paterno__istartswith=search_cod_operador)
+                Q(codigo__icontains=search_cod_operador)
+                | Q(nombre__icontains=search_cod_operador)
+                | Q(apellido_paterno__icontains=search_cod_operador)
             )
 
         return queryset.order_by("nombre", "apellido_paterno")

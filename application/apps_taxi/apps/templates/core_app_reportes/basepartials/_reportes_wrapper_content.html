@@ -51,13 +51,13 @@
                   <div class="col-4">
                     <label class="form-label">Fecha inicio</label>
                     <input type="date" id="id_turncond_fecha_inicio" name="fecha_inicio" class="form-control"
-                           placeholder="Fecha inicio">
+                           placeholder="Fecha inicio" value="{{ data_fecha_inicio|date:'Y-m-d' }}">
                     <small class="valid-feedback"> Error en este campo. </small>
                   </div>
                   <div class="col-4">
                     <label class="form-label">Fecha fin</label>
                     <input type="date" id="id_turncond_fecha_fin" name="fecha_fin" class="form-control"
-                           placeholder="Fecha fin">
+                           placeholder="Fecha fin" value="{{ data_fecha_fin|date:'Y-m-d' }}">
                     <small class="valid-feedback"> Error en este campo. </small>
                   </div>
                   <div class="col-4">

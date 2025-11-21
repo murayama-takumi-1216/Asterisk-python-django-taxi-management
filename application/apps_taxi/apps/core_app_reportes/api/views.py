@@ -199,8 +199,9 @@ class ReporteTurnoConductorViewSet(ProtectedAdministradorApiView, ModelViewSet):
         if search_estado_turno:
             queryset = queryset.filter(estado_turno=search_estado_turno)
         else:
+            # Include PROGRAMADO, ACTIVO, and CONCLUIDO states by default
             queryset = queryset.filter(
-                estado_turno__in=[ESTADO_TURNO_ACTIVO, ESTADO_TURNO_CONCLUIDO]
+                estado_turno__in=[ESTADO_TURNO_PROGRAMADO, ESTADO_TURNO_ACTIVO, ESTADO_TURNO_CONCLUIDO]
             )
         search_fecha_inicio = self.request.query_params.get("filtro_fecha_inicio", None)
         if search_fecha_inicio:
