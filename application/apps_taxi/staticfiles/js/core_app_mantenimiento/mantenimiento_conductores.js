@@ -19,7 +19,7 @@ $(document).ready(function () {
   const $campoConductorEstadoEeuu = $("#id_conductor_estado_eeuu");
 
   const $tblMantConductor = $("#lista-mant-conductores");
-  const arrayOcultarColumaMantConductorDatatable = [1, 2, 8, 9];
+  const arrayOcultarColumaMantConductorDatatable = [0, 1, 2, 8, 9];
 
   function ocultarColumDatatableMantConductor() {
     const filas = $("#lista-mant-conductores tbody").find("tr").length;
@@ -257,22 +257,13 @@ $(document).ready(function () {
         data: function (data) {
           let btnEstadoCambioEstado = "";
           let htmlAcciones = "";
-          const estadoPendiente = "01";
           const estadoAusente = "02";
           const estadoDisponible = "04";
           const estadoEnBaja = "05";
-          if ([estadoPendiente, estadoAusente, estadoDisponible].includes(data.estado)) {
+          if ([estadoAusente, estadoDisponible].includes(data.estado)) {
             if (data.estado == estadoDisponible) {
               btnEstadoCambioEstado = `<a href="javascript:void(0)" data-codconductor="${data.cod_conductor}"
                 class="dropdown-item text-warning cambio-estado-ausente"> Poner ausente </a>
-                <div class="dropdown-divider"></div>
-                <a href="javascript:void(0)" data-codconductor="${data.cod_conductor}"
-                class="dropdown-item text-primary cambio-estado-darbaja"> Dar de baja</a>
-              `;
-            }
-            if (data.estado == estadoPendiente) {
-              btnEstadoCambioEstado = `<a href="javascript:void(0)" data-codconductor="${data.cod_conductor}"
-                class="dropdown-item cambio-estado-disponible"> Marcar disponible</a>
                 <div class="dropdown-divider"></div>
                 <a href="javascript:void(0)" data-codconductor="${data.cod_conductor}"
                 class="dropdown-item text-primary cambio-estado-darbaja"> Dar de baja</a>

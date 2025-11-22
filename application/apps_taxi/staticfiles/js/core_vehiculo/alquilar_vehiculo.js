@@ -80,19 +80,6 @@ $(document).ready(function () {
     },
     columns: [
       {
-        class: "text-center",
-        orderable: false,
-        searchable: false,
-        width: "30",
-        data: function (data) {
-          if (arrayOcultarColumaAlquilerVehiculoDatatable.length > 0) {
-            return `<div class="details-control">&nbsp;</div>`;
-          }
-          return "";
-        },
-        defaultContent: ""
-      },
-      {
         className: "text-center",
         searchable: false,
         orderable: false,
@@ -122,7 +109,7 @@ $(document).ready(function () {
         className: "text-left",
         searchable: false,
         orderable: false,
-        width: "90",
+        width: "208",
         data: function (data) {
           return data.estado_vehiculo_text;
         }
@@ -131,7 +118,7 @@ $(document).ready(function () {
         className: "text-left",
         searchable: false,
         orderable: false,
-        width: "90",
+        width: "208",
         data: function (data) {
           return data.estado_alquilado_text;
         }
