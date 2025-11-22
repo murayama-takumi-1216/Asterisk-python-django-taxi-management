@@ -69,6 +69,19 @@ class Operador(AuditableModel, TimeStampedModel):
             codigo_new = int(codigo_ant) + 1
         return codigo_new
 
+    @staticmethod
+    def validar_nombre_unico(codigo, nombre, apellido_paterno):
+        """Validate unique name combination (nombre + apellido_paterno)"""
+        if nombre and apellido_paterno:
+            query = Operador.objects.filter(
+                nombre__iexact=nombre.strip(),
+                apellido_paterno__iexact=apellido_paterno.strip(),
+            )
+            if codigo:
+                query = query.exclude(codigo=codigo)
+            return not query.exists()
+        return True
+
 
 class CatHorarioOperardor(AuditableModel, TimeStampedModel):
     codigo = models.SlugField("Código", max_length=9, primary_key=True)

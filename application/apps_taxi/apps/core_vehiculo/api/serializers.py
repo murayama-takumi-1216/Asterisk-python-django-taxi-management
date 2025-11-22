@@ -87,6 +87,7 @@ class AlquilerVehiculoParaAlquilerSerializer(serializers.ModelSerializer):
     class Meta:
         model = AlquilerVehiculo
         fields = [
+            "id",
             "vehiculo",
             "conductor",
             "monto_alquiler",

@@ -338,3 +338,54 @@ class MantenerAlquilerVehiculoViewSet(ProtectedAdministradorApiView, ViewSet):
         data_out.update({"data": data_save, "message": "ok", "id": alquiler_codigo})
 
         return Response(serializer.data, status=HTTP_200_OK)
+
+    def destroy(self, request, pk=None, *args, **kwargs):
+        """
+        Delete (permanently remove) a vehicle rental record from the database.
+        This also updates the vehicle and conductor states.
+        """
+        alquiler_id = pk
+
+        # Validate alquiler exists
+        alquiler = AlquilerVehiculo.objects.filter(id=alquiler_id).first()
+        if not alquiler:
+            mensaje = "No se encuentra el alquiler"
+            raise ParseError({"detail": {"message": mensaje}})
+
+        try:
+            # Get references before deleting
+            vehiculo = alquiler.vehiculo
+            conductor = alquiler.conductor
+
+            # Delete the rental record
+            alquiler.delete()
+
+            # Update vehicle state to available
+            if vehiculo:
+                vehiculo.estado_alquilado = CAR_ESTADO_ALQUILER_LIBERADO
+                vehiculo.save(update_fields=["estado_alquilado"])
+                logger.info(f"Vehicle {vehiculo.cod_vehiculo} state updated to LIBERADO after rental deletion")
+
+            # Update conductor state to available
+            if conductor:
+                conductor.estado = CONDUCTOR_ESTADO_DISPONIBLE
+                conductor.save(update_fields=["estado"])
+                logger.info(f"Conductor {conductor.cod_conductor} state updated to DISPONIBLE after rental deletion")
+
+            # Close any related TurnoConductor records
+            if vehiculo:
+                TurnoConductor.cerrar_turnos_alquiler_concluido(vehiculo)
+
+            logger.info(f"Rental {alquiler_id} deleted successfully")
+
+            return Response(
+                {"message": "El alquiler ha sido eliminado correctamente", "id": alquiler_id},
+                status=HTTP_200_OK
+            )
+
+        except Exception as ex:
+            mensaje = "Error al eliminar el alquiler"
+            logger.error(mensaje, exc_info=True, extra={"exception": str(ex)})
+            raise APIException(
+                {"detail": {"message": mensaje, "error": str(ex)}}
+            )

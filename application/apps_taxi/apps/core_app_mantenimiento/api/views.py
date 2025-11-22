@@ -640,6 +640,11 @@ class OperadoresMantenerViewSet(ProtectedAdministradorApiView, ViewSet):
             mensaje = "requiere apellido paterno"
             raise ParseError({"detail": {"message": mensaje, "data": data}})
 
+        # Check for duplicate name
+        if not Operador.validar_nombre_unico(None, nombres, apellido_paterno):
+            mensaje = f"Ya existe un operador con el nombre '{nombres} {apellido_paterno}'"
+            raise ParseError({"detail": {"message": mensaje, "data": data}})
+
         data_save = {}
         data_out = {}
         try:
@@ -763,6 +768,11 @@ class OperadoresMantenerViewSet(ProtectedAdministradorApiView, ViewSet):
                 raise ParseError({"detail": {"message": mensaje, "data": data}})
             if not apellido_paterno:
                 mensaje = "requiere apellido paterno"
+                raise ParseError({"detail": {"message": mensaje, "data": data}})
+
+            # Check for duplicate name
+            if not Operador.validar_nombre_unico(codigo_operador, nombres, apellido_paterno):
+                mensaje = f"Ya existe un operador con el nombre '{nombres} {apellido_paterno}'"
                 raise ParseError({"detail": {"message": mensaje, "data": data}})
 
             data_save = {}

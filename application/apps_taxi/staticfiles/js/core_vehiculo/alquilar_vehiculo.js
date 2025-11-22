@@ -157,9 +157,18 @@ $(document).ready(function () {
         orderable: false,
         width: "120",
         data: function (data) {
-          let contarAlquileres = Object.keys(data.alquiler_data ?? {}).length;
+          let alquileres = data.alquiler_data ?? {};
+          let contarAlquileres = Object.keys(alquileres).length;
           if (contarAlquileres > 0) {
-            return `<button type="button" class="btn btn-sm btn-light agregar-alquiler" disabled><i
+            // Get the first rental id to delete
+            let alquilerId = "";
+            for (let key in alquileres) {
+              alquilerId = alquileres[key].id ?? "";
+              break;
+            }
+            return `<button type="button" data-codigoalquilado="${alquilerId}"
+              data-codigovehiculo="${data.cod_vehiculo ?? ""}"
+              class="btn btn-sm btn-danger eliminar-alquiler"><i
               class="fa fa-ban"></i></button>`;
           }
           let atributosData = `data-codigovehiculo="${data.cod_vehiculo ?? ""}"
@@ -340,6 +349,78 @@ $(document).ready(function () {
           text: mensaje,
           type: "warning",
           showConfirmButton: true, confirmButtonText: "Cerrar",
+        });
+      }
+    });
+  });
+
+  // Delete rental handler
+  $("#lista-alquiler-vehiculo tbody").on("click", ".eliminar-alquiler", function () {
+    const $auxBtn = $(this);
+    let codigoAlquiler = $auxBtn.data("codigoalquilado") ?? "";
+
+    if (!codigoAlquiler) {
+      swal.fire({
+        title: "Error",
+        html: "No se pudo obtener el código del alquiler",
+        type: "error",
+        showConfirmButton: true,
+        confirmButtonText: "Cerrar",
+      });
+      return;
+    }
+
+    // Confirm deletion
+    swal.fire({
+      title: "¿Está seguro?",
+      html: "¿Desea eliminar este alquiler permanentemente?<br><small class='text-danger'>Esta acción no se puede deshacer</small>",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Sí, eliminar",
+      cancelButtonText: "Cancelar"
+    }).then(function (result) {
+      if (result.value) {
+        const auxUrl = urlList.vehiculo.alquilerVehiculoDetail.replace("/0000/", `/${codigoAlquiler}/`);
+        const csrfToken = plgcliGetCookie(FRM_CSRF_TOKEN) ?? "";
+
+        $.ajax({
+          url: auxUrl,
+          type: "DELETE",
+          dataType: "json",
+          headers: {"X-CSRFToken": csrfToken},
+          beforeSend: function () {
+            $auxBtn.prop("disabled", true);
+          },
+          success: function (resp) {
+            swal.fire({
+              title: "Eliminado",
+              html: resp.message || "El alquiler ha sido eliminado correctamente",
+              type: "success",
+              showConfirmButton: true,
+              confirmButtonText: "Aceptar",
+            }).then(function () {
+              fnTblAlquilerVehiculo();
+            });
+          },
+          error: function (error) {
+            $auxBtn.prop("disabled", false);
+            let errorMessage = "Error al eliminar el alquiler";
+            try {
+              let errorData = error.responseJSON || {};
+              errorMessage = errorData.detail?.message || errorData.message || errorMessage;
+            } catch (e) {
+              console.error("Error parsing response:", e);
+            }
+            swal.fire({
+              title: "Error",
+              html: errorMessage,
+              type: "error",
+              showConfirmButton: true,
+              confirmButtonText: "Cerrar",
+            });
+          }
         });
       }
     });
