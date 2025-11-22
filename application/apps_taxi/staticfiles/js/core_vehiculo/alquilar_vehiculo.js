@@ -141,9 +141,9 @@ $(document).ready(function () {
               nombreConductor = `${conductor.nombre ?? ""} ${conductor.apellido_paterno ?? ""}`;
               alquilerFecha = `[${alquiler.fecha_inicio ?? ""} - ${alquiler.fecha_prog_fin ?? "*"}]`;
               tieneRadio = (alquiler.entrega_radio == true) ? "Con" : "Sin";
-              htmlAlquileres += `${nombreConductor} <button type="button"
+              htmlAlquileres += `<button type="button"
                 data-codigoalquilado="${alquiler.codigo ?? ""}" class="btn btn-sm btn-cyan editar-alquiler"><i
-                class="fa fa-edit"></i></button> <span class="text-black-50">${alquilerFecha}</span>
+                class="fa fa-edit"></i></button> ${nombreConductor} <span class="text-black-50">${alquilerFecha}</span>
                 <span> ${tieneRadio} radio</span>`;
             }
             return htmlAlquileres;
